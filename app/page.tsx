@@ -413,8 +413,7 @@ const CTAButtons = ({ scrollToSection }: { scrollToSection: (section: string) =>
 );
 
 // Componente: Tarjeta de Proyecto
-
-const ProjectCard = ({ project }: { project: typeof PROJECTS[0] }) => (
+const ProjectCard = ({ project, index }: { project: typeof PROJECTS[0]; index: number }) => (
   <div className={`bg-gray-800/50 rounded-xl overflow-hidden transition-all duration-300 border border-gray-700 hover:border-orange-500/50 hover:scale-105 hover:shadow-xl hover:shadow-orange-500/10 ${project.highlight ? 'ring-2 ring-orange-500/50' : ''}`}>
     {project.highlight && (
       <div className="absolute top-4 right-4 z-10">
