@@ -43,10 +43,10 @@ const PROJECTS = [
     status: "🚀 En desarrollo",
     type: "🎓 Tesis/Investigación",
     github: "https://github.com/JohnPaulMamaniQuispe",
-    demo: "https://omnisapiens.netlify.app/",
     paper: "/papers/ARTIIS_2025_Omnisapiens_Paper.pdf",
+    paperTitle: "📄 Ver Paper ARTIIS 2025",
     highlight: true,
-    metrics: "90% precisión en respuestas"
+    metrics: "Paper enviado a revisión internacional"
   },
   {
     title: "🎵 WORBUM - Plataforma Musical Sincronizada",
@@ -511,21 +511,29 @@ const ProjectCard = ({ project }: { project: typeof PROJECTS[0] }) => (
       </div>
       <div className="flex items-center justify-between">
         <div className="flex space-x-3">
-          <a href={project.github} className="text-gray-300 hover:text-orange-400 transition-colors" target="_blank" rel="noopener noreferrer">
+          <a href={project.github} className="text-gray-300 hover:text-orange-400 transition-colors" target="_blank" rel="noopener noreferrer" title="Ver código en GitHub">
             <Github size={20} />
           </a>
           {project.demo && (
-            <a href={project.demo} className="text-gray-300 hover:text-green-400 transition-colors" target="_blank" rel="noopener noreferrer">
+            <a href={project.demo} className="text-gray-300 hover:text-green-400 transition-colors" target="_blank" rel="noopener noreferrer" title="Ver demo en vivo">
               <Play size={20} />
             </a>
           )}
         </div>
-        {project.paper && (
-          <span className="text-xs bg-gradient-to-r from-purple-500 to-pink-500 text-white px-2 py-1 rounded flex items-center space-x-1">
-            <Award className="w-3 h-3" />
-            <span>{project.paper}</span>
-          </span>
-        )}
+        <div className="flex flex-col space-y-2">
+          {project.paper && (
+            <a
+              href={project.paper}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-2 rounded-lg flex items-center space-x-2 hover:scale-105 transition-transform cursor-pointer shadow-lg hover:shadow-purple-500/25"
+              title="Descargar paper completo"
+            >
+              <Award className="w-4 h-4" />
+              <span>{project.paperTitle || "Ver Paper"}</span>
+            </a>
+          )}
+        </div>
       </div>
     </div>
   </div>
