@@ -69,7 +69,6 @@ const PROJECTS = [
     demo: "https://tiqueton.netlify.app/",
     metrics: "0% de falsificación de tickets, 100% transparencia en transacciones"
   }
-   
 ,
   {
     title: "🛒 E-commerce con IA Predictiva",
@@ -677,12 +676,12 @@ export default function Portfolio() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg text-gray-300 leading-relaxed">
-                🎓 Estudiante de <span className="text-orange-400 font-semibold">Ingeniería de Software en la UPC</span> con enfoque en DevOps y tecnologías emergentes. 
+                 Estudiante de <span className="text-orange-400 font-semibold">Ingeniería de Software en la UPC</span> con enfoque en DevOps y tecnologías emergentes. 
                 Con experiencia práctica en desarrollo full stack, IA generativa y arquitecturas cloud escalables.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
-                🚀 Mi pasión por la <span className="text-yellow-400 font-semibold">innovación tecnológica</span> me ha llevado a especializarme en Machine Learning, 
-                Deep Learning y NLP, aplicando estas tecnologías en soluciones empresariales que generan valor real.
+                Mi pasión por la <span className="text-yellow-400 font-semibold">investigación científica y el análisis comparativo</span> es el motor de mi trabajo. 
+                Reviso, comparo y sintetizo estudios para identificar oportunidades de innovación, aplicando estos hallazgos en <span className="text-orange-400 font-semibold">Machine Learning, Deep Learning y NLP</span> para crear soluciones con fundamento científico.
               </p>
               <div className="space-y-3">
                 {[
@@ -750,8 +749,8 @@ export default function Portfolio() {
                         src="/images/logo-upc.png" 
                         alt="UPC Logo" 
                         className="w-full h-full object-contain hover:scale-110 transition-transform duration-300"
-                        width={56}
-                        height={56}
+                        width={58}
+                        height={58}
                       />
                     </div>
                     <div>
@@ -766,13 +765,13 @@ export default function Portfolio() {
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-14 h-14  rounded-lg flex items-center justify-center p-1">
+                    <div className="w-16 h-16  rounded-lg flex items-center justify-center p-1">
                       <Image 
                         src="/images/logo-utp.png" 
                         alt="UTP Logo" 
                         className="w-full h-full object-contain"
-                        width={56}
-                        height={56}
+                        width={58}
+                        height={58}
                       />
                     </div>
                     <div>
