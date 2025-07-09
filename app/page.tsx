@@ -1,9 +1,7 @@
 'use client'
-
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Github, Linkedin, Mail, Phone, MapPin, ChevronDown, Menu, X, Code, Database, Cloud, Brain, Smartphone, Globe, Star, Zap, Award, Rocket, Download, Play } from 'lucide-react';
-
 // =================================
 //  DATOS DEL PORTAFOLIO
 // =================================
@@ -19,7 +17,6 @@ const PERSONAL_INFO = {
   linkedin: "https://www.linkedin.com/in/john-paul-mamani-quispe-159129b3",
   whatsappMessage: "Hola John Paul, me interesa conocer más sobre tus servicios de desarrollo de software"
 };
-
 const TYPING_ROLES = [
   "Software Engineer 💻",
   "AI Enthusiast 🤖", 
@@ -27,14 +24,12 @@ const TYPING_ROLES = [
   "Cloud Architect ☁️",
   "ML Engineer 🧠"
 ];
-
 const STATS = [
-  { value: "95%", label: "Promedio UPC", color: "text-orange-400" },
-  { value: "6+", label: "Proyectos", color: "text-yellow-400" },
-  { value: "20+", label: "Tecnologías", color: "text-orange-500" },
-  { value: "2+", label: "Años Exp.", color: "text-yellow-500" }
+  { value: "95%", label: "Promedio UPC", color: "text-cyan-400" },
+  { value: "6+", label: "Proyectos", color: "text-blue-400" },
+  { value: "20+", label: "Tecnologías", color: "text-cyan-500" },
+  { value: "2+", label: "Años Exp.", color: "text-blue-500" }
 ];
-
 const PROJECTS = [
   {
     title: "Omnisapiens - Agente Inteligente Multimodal y Omnicanal",
@@ -101,7 +96,6 @@ const PROJECTS = [
     metrics: "99.5% uptime"
   }
 ];
-
 const SKILLS = {
   "Frontend": {
     icon: <Globe className="w-8 h-8" />,
@@ -127,7 +121,7 @@ const SKILLS = {
       "https://img.shields.io/badge/Express.js-404D59?style=flat&logo=express&logoColor=white"
     ],
     level: 90,
-    color: "from-green-400 to-emerald-600"
+    color: "from-blue-400 to-cyan-600"
   },
   "Mobile": {
     icon: <Smartphone className="w-8 h-8" />,
@@ -138,7 +132,7 @@ const SKILLS = {
       "https://img.shields.io/badge/Kotlin-7F52FF?style=flat&logo=kotlin&logoColor=white"
     ],
     level: 85,
-    color: "from-purple-400 to-pink-600"
+    color: "from-cyan-500 to-blue-500"
   },
   "IA & ML": {
     icon: <Brain className="w-8 h-8" />,
@@ -151,7 +145,7 @@ const SKILLS = {
       "https://img.shields.io/badge/Rasa-5A5E9C?style=flat&logo=rasa&logoColor=white"
     ],
     level: 88,
-    color: "from-orange-400 to-red-600"
+    color: "from-blue-500 to-cyan-500"
   },
   "Cloud & DevOps": {
     icon: <Cloud className="w-8 h-8" />,
@@ -176,10 +170,9 @@ const SKILLS = {
       "https://img.shields.io/badge/Elasticsearch-005571?style=flat&logo=elasticsearch&logoColor=white"
     ],
     level: 87,
-    color: "from-yellow-400 to-orange-600"
+    color: "from-cyan-400 to-blue-500"
   }
 };
-
 const EXPERIENCE = [
   {
     company: "🚀 Proyecto Omnisapiens",
@@ -206,23 +199,22 @@ const EXPERIENCE = [
     achievements: ["5 proyectos entregados", "100% cumplimiento de deadlines", "Metodologías ágiles"]
   }
 ];
-
 const CONTACT_INFO = [
   { 
     icon: Mail, 
     title: "Email", 
     value: PERSONAL_INFO.email,
     href: `mailto:${PERSONAL_INFO.email}`,
-    color: "from-red-400 to-pink-600",
-    hoverColor: "group-hover:text-red-400"
+    color: "from-cyan-400 to-blue-600",
+    hoverColor: "group-hover:text-cyan-400"
   },
   { 
     icon: Phone, 
     title: "Teléfono", 
     value: PERSONAL_INFO.phone,
     href: `tel:${PERSONAL_INFO.phone.replace(/\s/g, '')}`,
-    color: "from-green-400 to-blue-600",
-    hoverColor: "group-hover:text-green-400"
+    color: "from-blue-400 to-cyan-600",
+    hoverColor: "group-hover:text-blue-400"
   },
   { 
     icon: Linkedin, 
@@ -233,11 +225,9 @@ const CONTACT_INFO = [
     hoverColor: "group-hover:text-blue-400"
   }
 ];
-
 // =================================
 // 🎨 COMPONENTES REUTILIZABLES
 // =================================
-
 // Componente: Botón WhatsApp
 const WhatsAppButton = () => (
   <>
@@ -287,7 +277,6 @@ const WhatsAppButton = () => (
         }
       }
     `}</style>
-
     <a 
       href={`https://wa.me/${PERSONAL_INFO.phone.replace(/[\s+]/g, '')}?text=${encodeURIComponent(PERSONAL_INFO.whatsappMessage)}`}
       className="btn-whatsapp"
@@ -304,7 +293,6 @@ const WhatsAppButton = () => (
     </a>
   </>
 );
-
 // Componente: Navegación
 const Navigation = ({ activeSection, isScrolled, isMenuOpen, setIsMenuOpen, scrollToSection }: {
   activeSection: string;
@@ -319,7 +307,7 @@ const Navigation = ({ activeSection, isScrolled, isMenuOpen, setIsMenuOpen, scro
     <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-gray-900/95 backdrop-blur-sm border-b border-gray-800' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="text-2xl font-bold bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
+          <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
             JP
           </div>
           
@@ -330,7 +318,7 @@ const Navigation = ({ activeSection, isScrolled, isMenuOpen, setIsMenuOpen, scro
                   key={item}
                   onClick={() => scrollToSection(item)}
                   className={`px-3 py-2 text-sm font-medium transition-colors capitalize ${
-                    activeSection === item ? 'text-orange-400' : 'text-gray-300 hover:text-orange-400'
+                    activeSection === item ? 'text-cyan-400' : 'text-gray-300 hover:text-cyan-400'
                   }`}
                 >
                   {item}
@@ -357,7 +345,7 @@ const Navigation = ({ activeSection, isScrolled, isMenuOpen, setIsMenuOpen, scro
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className="block px-3 py-2 text-base font-medium text-gray-300 hover:text-orange-400 capitalize w-full text-left transition-colors"
+                className="block px-3 py-2 text-base font-medium text-gray-300 hover:text-cyan-400 capitalize w-full text-left transition-colors"
               >
                 {item}
               </button>
@@ -368,12 +356,11 @@ const Navigation = ({ activeSection, isScrolled, isMenuOpen, setIsMenuOpen, scro
     </nav>
   );
 };
-
 // Componente: Avatar con Foto
 const ProfileAvatar = () => (
   <div className="relative mb-8">
     <div className="w-48 h-48 mx-auto relative group">
-      <div className="absolute -inset-1 bg-gradient-to-r from-orange-400 to-yellow-500 rounded-full"></div>
+      <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-full"></div>
       <div className="relative w-full h-full bg-gray-900 rounded-full overflow-hidden border-4 border-gray-900">
         <Image 
           src={PERSONAL_INFO.photo}
@@ -389,34 +376,31 @@ const ProfileAvatar = () => (
             if (fallback) fallback.style.display = 'flex';
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-400 to-yellow-500 rounded-full flex items-center justify-center text-6xl font-bold text-white" style={{display: 'none'}}>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full flex items-center justify-center text-6xl font-bold text-white" style={{display: 'none'}}>
           JP
         </div>
       </div>
     </div>
   </div>
 );
-
 // Componente: Estadísticas
 const StatsGrid = () => (
   <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-3xl mx-auto">
     {STATS.map((stat, index) => (
-      <div key={index} className="bg-gray-800/50 rounded-xl p-4 border border-gray-700 hover:border-orange-500/50 transition-all">
+      <div key={index} className="bg-gray-800/50 rounded-xl p-4 border border-gray-700 hover:border-cyan-500/50 transition-all">
         <div className={`text-2xl font-bold ${stat.color}`}>{stat.value}</div>
         <div className="text-sm text-gray-400">{stat.label}</div>
       </div>
     ))}
   </div>
 );
-
 // Componente: Enlaces Sociales
 const SocialLinks = () => {
   const socialLinks = [
     { href: PERSONAL_INFO.github, icon: Github, color: "hover:text-gray-400" },
-    { href: PERSONAL_INFO.linkedin, icon: Linkedin, color: "hover:text-orange-400" },
-    { href: `mailto:${PERSONAL_INFO.email}`, icon: Mail, color: "hover:text-yellow-400" }
+    { href: PERSONAL_INFO.linkedin, icon: Linkedin, color: "hover:text-cyan-400" },
+    { href: `mailto:${PERSONAL_INFO.email}`, icon: Mail, color: "hover:text-blue-400" }
   ];
-
   return (
     <div className="flex justify-center space-x-6 mb-12">
       {socialLinks.map(({ href, icon: Icon, color }, index) => (
@@ -433,13 +417,12 @@ const SocialLinks = () => {
     </div>
   );
 };
-
 // Componente: Botones de Acción
 const CTAButtons = ({ scrollToSection }: { scrollToSection: (section: string) => void }) => (
   <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
     <button
       onClick={() => scrollToSection('projects')}
-      className="px-8 py-4 bg-gradient-to-r from-orange-500 to-yellow-500 text-white rounded-xl font-medium transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-orange-500/25 flex items-center justify-center space-x-2"
+      className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-medium transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/25 flex items-center justify-center space-x-2"
     >
       <Rocket className="w-5 h-5" />
       <span>Ver Proyectos</span>
@@ -447,7 +430,7 @@ const CTAButtons = ({ scrollToSection }: { scrollToSection: (section: string) =>
     
     <button
       onClick={() => scrollToSection('contact')}
-      className="px-8 py-4 border-2 border-orange-500 text-orange-500 rounded-xl font-medium transition-all duration-300 hover:scale-105 hover:bg-orange-500 hover:text-white flex items-center justify-center space-x-2"
+      className="px-8 py-4 border-2 border-cyan-500 text-cyan-500 rounded-xl font-medium transition-all duration-300 hover:scale-105 hover:bg-cyan-500 hover:text-white flex items-center justify-center space-x-2"
     >
       <Mail className="w-5 h-5" />
       <span>Contactar</span>
@@ -456,20 +439,19 @@ const CTAButtons = ({ scrollToSection }: { scrollToSection: (section: string) =>
     <a 
       href="/cv/John_Paul_Mamani_CV.pdf"
       download="John_Paul_Mamani_CV.pdf"
-      className="px-8 py-4 border-2 border-yellow-500 text-yellow-500 rounded-xl font-medium transition-all duration-300 hover:scale-105 hover:bg-yellow-500 hover:text-black flex items-center justify-center space-x-2"
+      className="px-8 py-4 border-2 border-blue-500 text-blue-500 rounded-xl font-medium transition-all duration-300 hover:scale-105 hover:bg-blue-500 hover:text-black flex items-center justify-center space-x-2"
     >
       <Download className="w-5 h-5" />
       <span>Descargar CV</span>
     </a>
   </div>
 );
-
 // Componente: Tarjeta de Proyecto
 const ProjectCard = ({ project }: { project: typeof PROJECTS[0] }) => (
-  <div className={`relative bg-gray-800/50 rounded-xl overflow-hidden transition-all duration-300 border border-gray-700 hover:border-orange-500/50 hover:scale-105 hover:shadow-xl hover:shadow-orange-500/10 ${project.highlight ? 'ring-2 ring-orange-500/50' : ''}`}>
+  <div className={`relative bg-gray-800/50 rounded-xl overflow-hidden transition-all duration-300 border border-gray-700 hover:border-cyan-500/50 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 ${project.highlight ? 'ring-2 ring-cyan-500/50' : ''}`}>
     {project.highlight && (
       <div className="absolute top-4 right-4 z-10">
-        <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold flex items-center space-x-1">
+        <div className="bg-gradient-to-r from-blue-400 to-cyan-500 text-black px-3 py-1 rounded-full text-xs font-bold flex items-center space-x-1">
           <Star className="w-3 h-3" />
           <span>Destacado</span>
         </div>
@@ -477,24 +459,24 @@ const ProjectCard = ({ project }: { project: typeof PROJECTS[0] }) => (
     )}
     <div className="p-6">
       <div className="flex items-center justify-between mb-4">
-        <span className="text-sm bg-gradient-to-r from-orange-500 to-yellow-500 text-white px-3 py-1 rounded-full">
+        <span className="text-sm bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-3 py-1 rounded-full">
           {project.type}
         </span>
         <span className={`text-sm px-3 py-1 rounded-full text-white ${
           project.status.includes('Completado') ? 'bg-green-500' : 
-          project.status.includes('desarrollo') ? 'bg-yellow-500' : 'bg-blue-500'
+          project.status.includes('desarrollo') ? 'bg-blue-500' : 'bg-cyan-500'
         }`}>
           {project.status}
         </span>
       </div>
-      <h3 className="text-xl font-semibold mb-3 text-white hover:text-orange-400 transition-colors">{project.title}</h3>
+      <h3 className="text-xl font-semibold mb-3 text-white hover:text-cyan-400 transition-colors">{project.title}</h3>
       <p className="text-gray-300 mb-4 text-sm leading-relaxed">{project.description}</p>
       
       {project.metrics && (
-        <div className="mb-4 p-3 bg-orange-500/10 rounded-lg border border-orange-500/20">
+        <div className="mb-4 p-3 bg-cyan-500/10 rounded-lg border border-cyan-500/20">
           <div className="flex items-center space-x-2">
-            <Zap className="w-4 h-4 text-yellow-400" />
-            <span className="text-sm font-medium text-orange-400">{project.metrics}</span>
+            <Zap className="w-4 h-4 text-blue-400" />
+            <span className="text-sm font-medium text-cyan-400">{project.metrics}</span>
           </div>
         </div>
       )}
@@ -513,7 +495,7 @@ const ProjectCard = ({ project }: { project: typeof PROJECTS[0] }) => (
       </div>
       <div className="flex items-center justify-between">
         <div className="flex space-x-3">
-          <a href={project.github} className="text-gray-300 hover:text-orange-400 transition-colors" target="_blank" rel="noopener noreferrer" title="Ver código en GitHub">
+          <a href={project.github} className="text-gray-300 hover:text-cyan-400 transition-colors" target="_blank" rel="noopener noreferrer" title="Ver código en GitHub">
             <Github size={20} />
           </a>
           {project.demo && (
@@ -540,7 +522,6 @@ const ProjectCard = ({ project }: { project: typeof PROJECTS[0] }) => (
     </div>
   </div>
 );
-
 // =================================
 // 🏠 COMPONENTE PRINCIPAL
 // =================================
@@ -552,12 +533,10 @@ export default function Portfolio() {
   const [mounted, setMounted] = useState(false);
   const [typedText, setTypedText] = useState('');
   const [currentRole, setCurrentRole] = useState(0);
-
   // Efectos
   useEffect(() => {
     setMounted(true);
   }, []);
-
   // Animación de escritura
   useEffect(() => {
     if (!mounted) return;
@@ -577,10 +556,8 @@ export default function Portfolio() {
         clearInterval(typingInterval);
       }
     }, 100);
-
     return () => clearInterval(typingInterval);
   }, [currentRole, mounted]);
-
   // Detección de scroll
   useEffect(() => {
     if (!mounted) return;
@@ -592,7 +569,6 @@ export default function Portfolio() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [mounted]);
-
   // Navegación suave
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -602,29 +578,25 @@ export default function Portfolio() {
       setIsMenuOpen(false);
     }
   };
-
   // Pantalla de carga
   if (!mounted) {
     return (
       <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
         <div className="text-center">
-          <div className="w-16 h-16 border-4 border-orange-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
           <div className="text-xl">Cargando portafolio...</div>
         </div>
       </div>
     );
   }
-
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Botón WhatsApp */}
       <WhatsAppButton />
-
       {/* Fondo */}
       <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900/10 to-purple-900/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900/10 to-cyan-900/10"></div>
       </div>
-
       {/* Navegación */}
       <Navigation 
         activeSection={activeSection}
@@ -633,29 +605,25 @@ export default function Portfolio() {
         setIsMenuOpen={setIsMenuOpen}
         scrollToSection={scrollToSection}
       />
-
       {/* SECCIÓN: Hero */}
       <section id="home" className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">
         <div className="max-w-7xl mx-auto w-full relative z-10">
           <div className="text-center">
             <ProfileAvatar />
-
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
               {PERSONAL_INFO.name}
             </h1>
             
             <div className="h-16 mb-8">
               <h2 className="text-2xl md:text-4xl text-gray-300">
-                <span className="text-orange-400 font-bold">{typedText}</span>
+                <span className="text-cyan-400 font-bold">{typedText}</span>
                 <span className="animate-pulse">|</span>
               </h2>
             </div>
-
             <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">
-              🚀 Transformando ideas innovadoras en <span className="text-orange-400 font-semibold">código que impacta el mundo real</span>. 
+              🚀 Transformando ideas innovadoras en <span className="text-cyan-400 font-semibold">código que impacta el mundo real</span>. 
               Especializado en desarrollo full stack, IA generativa y arquitecturas cloud escalables.
             </p>
-
             <StatsGrid />
             <SocialLinks />
             <CTAButtons scrollToSection={scrollToSection} />
@@ -663,31 +631,30 @@ export default function Portfolio() {
         </div>
         
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ChevronDown className="text-orange-400" size={32} />
+          <ChevronDown className="text-cyan-400" size={32} />
         </div>
       </section>
-
       {/* SECCIÓN: Sobre Mí */}
       <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
             Sobre Mí ✨
           </h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg text-gray-300 leading-relaxed">
-                 Estudiante de <span className="text-orange-400 font-semibold">Ingeniería de Software en la UPC</span> con enfoque en DevOps y tecnologías emergentes. 
+                 Estudiante de <span className="text-cyan-400 font-semibold">Ingeniería de Software en la UPC</span> con enfoque en DevOps y tecnologías emergentes. 
                 Con experiencia práctica en desarrollo full stack, IA generativa y arquitecturas cloud escalables.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
-                Mi pasión por la <span className="text-yellow-400 font-semibold">investigación científica y el análisis comparativo</span> es el motor de mi trabajo. 
-                Reviso, comparo y sintetizo estudios para identificar oportunidades de innovación, aplicando estos hallazgos en <span className="text-orange-400 font-semibold">Machine Learning, Deep Learning y NLP</span> para crear soluciones con fundamento científico.
+                Mi pasión por la <span className="text-blue-400 font-semibold">investigación científica y el análisis comparativo</span> es el motor de mi trabajo. 
+                Reviso, comparo y sintetizo estudios para identificar oportunidades de innovación, aplicando estos hallazgos en <span className="text-cyan-400 font-semibold">Machine Learning, Deep Learning y NLP</span> para crear soluciones con fundamento científico.
               </p>
               <div className="space-y-3">
                 {[
-                  { icon: MapPin, text: PERSONAL_INFO.location, color: "text-orange-400" },
-                  { icon: Phone, text: PERSONAL_INFO.phone, color: "text-yellow-400" },
-                  { icon: Mail, text: PERSONAL_INFO.email, color: "text-orange-500" }
+                  { icon: MapPin, text: PERSONAL_INFO.location, color: "text-cyan-400" },
+                  { icon: Phone, text: PERSONAL_INFO.phone, color: "text-blue-400" },
+                  { icon: Mail, text: PERSONAL_INFO.email, color: "text-cyan-500" }
                 ].map(({ icon: Icon, text, color }, index) => (
                   <div key={index} className="flex items-center space-x-3 hover:scale-105 transition-transform">
                     <Icon className={color} size={20} />
@@ -697,8 +664,8 @@ export default function Portfolio() {
               </div>
             </div>
             <div className="space-y-6">
-              <div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-orange-500/50 transition-all">
-                <h3 className="text-xl font-semibold mb-4 text-orange-400 flex items-center space-x-2">
+              <div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all">
+                <h3 className="text-xl font-semibold mb-4 text-cyan-400 flex items-center space-x-2">
                   <Award className="w-6 h-6" />
                   <span>Educación</span>
                 </h3>
@@ -758,9 +725,9 @@ export default function Portfolio() {
                       <p className="text-gray-400">Ingeniería de Software • 2019-2025</p>
                       <div className="flex items-center space-x-2 mt-2">
                         <div className="w-full bg-gray-700 rounded-full h-2">
-                          <div className="bg-gradient-to-r from-orange-400 to-yellow-400 h-2 rounded-full" style={{width: '95%'}}></div>
+                          <div className="bg-gradient-to-r from-blue-400 to-cyan-400 h-2 rounded-full" style={{width: '95%'}}></div>
                         </div>
-                        <span className="text-sm text-orange-400 font-medium">95%</span>
+                        <span className="text-sm text-cyan-400 font-medium">95%</span>
                       </div>
                     </div>
                   </div>
@@ -779,25 +746,25 @@ export default function Portfolio() {
                       <p className="text-gray-400">Ingeniería Electrónica • 2014-2018</p>
                       <div className="flex items-center space-x-2 mt-2">
                         <div className="w-full bg-gray-700 rounded-full h-2">
-                          <div className="bg-gradient-to-r from-yellow-400 to-orange-400 h-2 rounded-full" style={{width: '100%'}}></div>
+                          <div className="bg-gradient-to-r from-blue-400 to-cyan-400 h-2 rounded-full" style={{width: '100%'}}></div>
                         </div>
-                        <span className="text-sm text-yellow-400 font-medium">100%</span>
+                        <span className="text-sm text-blue-400 font-medium">100%</span>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-yellow-500/50 transition-all">
-                <h3 className="text-xl font-semibold mb-4 text-yellow-400 flex items-center space-x-2">
+              <div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-blue-500/50 transition-all">
+                <h3 className="text-xl font-semibold mb-4 text-blue-400 flex items-center space-x-2">
                   <Star className="w-6 h-6" />
                   <span>Especialidades</span>
                 </h3>
                 <div className="grid grid-cols-2 gap-3">
                   {[
-                    { icon: Code, text: "Full Stack", color: "text-orange-400" },
-                    { icon: Brain, text: "IA & ML", color: "text-yellow-400" },
-                    { icon: Cloud, text: "Cloud & DevOps", color: "text-orange-500" },
-                    { icon: Smartphone, text: "Mobile Dev", color: "text-yellow-500" }
+                    { icon: Code, text: "Full Stack", color: "text-cyan-400" },
+                    { icon: Brain, text: "IA & ML", color: "text-blue-400" },
+                    { icon: Cloud, text: "Cloud & DevOps", color: "text-cyan-500" },
+                    { icon: Smartphone, text: "Mobile Dev", color: "text-blue-500" }
                   ].map(({ icon: Icon, text, color }, index) => (
                     <div key={index} className="flex items-center space-x-2">
                       <Icon className={color} size={16} />
@@ -810,11 +777,10 @@ export default function Portfolio() {
           </div>
         </div>
       </section>
-
       {/* SECCIÓN: Proyectos */}
       <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
             Proyectos Destacados 🚀
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -824,18 +790,17 @@ export default function Portfolio() {
           </div>
         </div>
       </section>
-
       {/* SECCIÓN: Habilidades */}
       <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
             Habilidades Técnicas 💻
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {Object.entries(SKILLS).map(([category, data]) => (
-              <div key={category} className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-orange-500/50 transition-all hover:scale-105">
+              <div key={category} className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-cyan-500/50 transition-all hover:scale-105">
                 <div className="flex items-center space-x-3 mb-6">
-                  <div className="text-orange-400 hover:text-yellow-400 transition-colors">
+                  <div className="text-cyan-400 hover:text-blue-400 transition-colors">
                     {data.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white">{category}</h3>
@@ -845,7 +810,7 @@ export default function Portfolio() {
                 <div className="mb-4">
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-sm text-gray-400">Nivel de experiencia</span>
-                    <span className="text-sm font-bold text-orange-400">{data.level}%</span>
+                    <span className="text-sm font-bold text-cyan-400">{data.level}%</span>
                   </div>
                   <div className="w-full bg-gray-700 rounded-full h-3">
                     <div 
@@ -870,23 +835,22 @@ export default function Portfolio() {
           </div>
         </div>
       </section>
-
       {/* SECCIÓN: Experiencia */}
       <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
             Experiencia Profesional 💼
           </h2>
           <div className="space-y-8">
             {EXPERIENCE.map((exp, index) => (
-              <div key={index} className="bg-gray-800/50 rounded-xl p-6 border-l-4 border-orange-500 border border-gray-700 hover:border-orange-500/50 transition-all hover:scale-105">
+              <div key={index} className="bg-gray-800/50 rounded-xl p-6 border-l-4 border-cyan-500 border border-gray-700 hover:border-cyan-500/50 transition-all hover:scale-105">
                 <div className="flex items-start space-x-4">
                   <div className="text-4xl">{exp.icon}</div>
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                       <div>
-                        <h3 className="text-xl font-semibold text-white hover:text-orange-400 transition-colors">{exp.role}</h3>
-                        <h4 className="text-lg text-orange-400 font-medium">{exp.company}</h4>
+                        <h3 className="text-xl font-semibold text-white hover:text-cyan-400 transition-colors">{exp.role}</h3>
+                        <h4 className="text-lg text-cyan-400 font-medium">{exp.company}</h4>
                       </div>
                       <span className="text-gray-400 text-sm mt-2 md:mt-0 bg-gray-700 px-3 py-1 rounded-full">{exp.period}</span>
                     </div>
@@ -894,14 +858,14 @@ export default function Portfolio() {
                     
                     {/* Logros */}
                     <div className="space-y-2">
-                      <h5 className="text-sm font-semibold text-orange-400 flex items-center space-x-2">
+                      <h5 className="text-sm font-semibold text-cyan-400 flex items-center space-x-2">
                         <Award className="w-4 h-4" />
                         <span>Logros destacados:</span>
                       </h5>
                       <div className="grid md:grid-cols-3 gap-2">
                         {exp.achievements.map((achievement, i) => (
                           <div key={i} className="flex items-center space-x-2 text-sm text-gray-300">
-                            <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
+                            <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
                             <span>{achievement}</span>
                           </div>
                         ))}
@@ -914,29 +878,28 @@ export default function Portfolio() {
           </div>
         </div>
       </section>
-
       {/* SECCIÓN: Contacto */}
       <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
             Contacto 📞
           </h2>
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-xl text-gray-300 mb-12 leading-relaxed">
               🚀 ¿Interesado en colaborar? Estoy abierto a nuevas oportunidades y proyectos innovadores.
               <br />
-              <span className="text-orange-400 font-semibold">¡Construyamos algo increíble juntos!</span>
+              <span className="text-cyan-400 font-semibold">¡Construyamos algo increíble juntos!</span>
             </p>
             <div className="grid md:grid-cols-3 gap-8">
               {CONTACT_INFO.map(({ icon: Icon, title, value, href, color, hoverColor }, index) => (
                 <a
                   key={index}
                   href={href}
-                  className="group bg-gray-800/50 p-8 rounded-xl border border-gray-700 hover:border-orange-500/50 transition-all hover:scale-105 block"
+                  className="group bg-gray-800/50 p-8 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all hover:scale-105 block"
                   target={href.startsWith('http') ? '_blank' : undefined}
                   rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
                 >
-                  <Icon className={`text-orange-400 mx-auto mb-4 ${hoverColor} transition-colors transform group-hover:scale-110`} size={48} />
+                  <Icon className={`text-cyan-400 mx-auto mb-4 ${hoverColor} transition-colors transform group-hover:scale-110`} size={48} />
                   <h3 className="text-lg font-semibold mb-2 text-white">{title}</h3>
                   <p className={`text-gray-300 ${hoverColor} transition-colors`}>{value}</p>
                   <div className={`w-0 group-hover:w-full h-1 bg-gradient-to-r ${color} mx-auto mt-4 transition-all duration-300 rounded`}></div>
@@ -946,12 +909,11 @@ export default function Portfolio() {
           </div>
         </div>
       </section>
-
       {/* SECCIÓN: Footer */}
       <footer className="bg-gray-900 py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-800">
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="mb-8">
-            <div className="text-3xl font-bold bg-gradient-to-r from-orange-400 via-yellow-400 to-orange-500 bg-clip-text text-transparent mb-4">
+            <div className="text-3xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent mb-4">
               {PERSONAL_INFO.name}
             </div>
             <p className="text-gray-400 mb-6">{PERSONAL_INFO.title}</p>
@@ -964,7 +926,7 @@ export default function Portfolio() {
                 <a
                   key={index}
                   href={href}
-                  className="text-gray-400 hover:text-orange-400 transition-all duration-300 transform hover:scale-110"
+                  className="text-gray-400 hover:text-cyan-400 transition-all duration-300 transform hover:scale-110"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -978,7 +940,7 @@ export default function Portfolio() {
               © 2025 {PERSONAL_INFO.name}. Todos los derechos reservados.
             </p>
             <p className="text-gray-500 text-sm mt-2">
-              Desarrollado con amor usando Next.js, React, Tailwind CSS y mucho café 
+              Desarrollado con ❤️ usando Next.js, React, Tailwind CSS y mucho café ☕
             </p>
           </div>
         </div>
