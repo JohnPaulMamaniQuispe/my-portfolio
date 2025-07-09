@@ -44,7 +44,7 @@ const PROJECTS = [
     type: "🎓 Tesis/Investigación",
     github: "https://github.com/JohnPaulMamaniQuispe",
     demo: "https://omnisapiens.netlify.app/",
-    paper: "/papers/ARTIIS_2025_Omnisapiens_Paper.pdf",
+    paper: "/papers/TP1202510042_Long_Paper_Coautoria_v.1.2.pdf",
     highlight: true,
     metrics: "Paper enviado a revisión internacional"
   },
