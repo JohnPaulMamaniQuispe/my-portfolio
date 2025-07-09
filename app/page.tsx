@@ -44,7 +44,7 @@ const PROJECTS = [
     type: "🎓 Tesis/Investigación",
     github: "https://github.com/JohnPaulMamaniQuispe",
     demo: "https://omnisapiens.netlify.app/",
-    paper: "/papers/TP1202510042_Long_Paper_Coautoria_v.1.2.pdf",
+    paper: "/papers/ARTIIS_2025_Omnisapiens_Paper.pdf",
     highlight: true,
     metrics: "Paper enviado a revisión internacional"
   },
@@ -530,7 +530,7 @@ const ProjectCard = ({ project }: { project: typeof PROJECTS[0] }) => (
               title="Descargar paper completo"
             >
               <Award className="w-4 h-4" />
-              <span>{project.paperTitle || "Ver Paper"}</span>
+              <span>📄 Ver Paper ARTIIS 2025</span>
             </a>
           )}
         </div>
