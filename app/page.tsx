@@ -38,12 +38,13 @@ const STATS = [
 const PROJECTS = [
   {
     title: "🤖 Omnisapiens - Agente Inteligente Multimodal",
-    description: "Revolucionario proyecto de tesis que utiliza IA generativa, NLP y Deep Learning para automatizar atención al cliente en PYMEs. Procesa múltiples modalidades: texto, voz e imágenes.",
+    description: "🚀 Sistema de Agente Inteligente Multimodal y Omnicanal (SAIMO) que revoluciona la atención al cliente en PYMEs. Utiliza Deep Learning, NLP avanzado e IA generativa para procesar y responder automáticamente consultas en múltiples formatos: texto, voz, imágenes y documentos. Transforma la experiencia del cliente con respuestas inteligentes 24/7.",
     tech: ["Python", "Deep Learning", "NLP", "IA Generativa", "FastAPI", "TensorFlow"],
     status: "🚀 En desarrollo",
     type: "🎓 Tesis/Investigación",
     github: "https://github.com/JohnPaulMamaniQuispe",
-    paper: "ARTIIS 2025",
+    demo: "https://omnisapiens.netlify.app/",
+    paper: "/papers/ARTIIS_2025_Omnisapiens_Paper.pdf",
     highlight: true,
     metrics: "90% precisión en respuestas"
   },
@@ -69,13 +70,14 @@ const PROJECTS = [
     metrics: "35% aumento en conversiones"
   },
   {
-    title: "₿ Blockchain DeFi Platform",
-    description: "Plataforma DeFi completa para staking y yield farming con contratos inteligentes auditados e interfaz web3 de última generación.",
-    tech: ["Solidity", "React", "Web3.js", "Hardhat", "IPFS"],
-    status: "🚀 En desarrollo",
-    type: "⛓️ Blockchain",
+    title: "🎫 THE BIG FUN - Plataforma de Ticketing Blockchain",
+    description: "Sistema avanzado de gestión y venta de entradas para conciertos con blockchain. Utiliza smart contracts para prevenir falsificación de tickets, garantizar trazabilidad completa en transferencias y generar tokens únicos con hash que protegen tanto al vendedor anterior como al comprador actual. Maximiza seguridad e ingresos del evento.",
+    tech: ["Solidity", "React", "Web3.js", "Hardhat", "IPFS", "Smart Contracts"],
+    status: "✅ Implementado",
+    type: "⛓️ Blockchain + Eventos",
     github: "https://github.com/johnmamani",
-    metrics: "$50K+ TVL"
+    demo: "https://tiqueton.netlify.app/",
+    metrics: "0% tickets falsificados"
   },
   {
     title: "🏢 Sistema de Gestión Empresarial",
@@ -101,37 +103,76 @@ const PROJECTS = [
 const SKILLS = {
   "Frontend": {
     icon: <Globe className="w-8 h-8" />,
-    techs: ["React", "Next.js", "Angular", "Vue.js", "TypeScript", "Tailwind CSS"],
+    badges: [
+      "https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB",
+      "https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs&logoColor=white",
+      "https://img.shields.io/badge/Angular-DD0031?style=flat&logo=angular&logoColor=white",
+      "https://img.shields.io/badge/Vue.js-35495E?style=flat&logo=vuedotjs&logoColor=4FC08D",
+      "https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white",
+      "https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white"
+    ],
     level: 95,
     color: "from-cyan-400 to-blue-600"
   },
   "Backend": {
     icon: <Database className="w-8 h-8" />,
-    techs: ["Node.js", "Python", "Java", "Spring Boot", "FastAPI", "Express.js"],
+    badges: [
+      "https://img.shields.io/badge/Node.js-43853D?style=flat&logo=node.js&logoColor=white",
+      "https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white",
+      "https://img.shields.io/badge/Java-ED8B00?style=flat&logo=java&logoColor=white",
+      "https://img.shields.io/badge/Spring-6DB33F?style=flat&logo=spring&logoColor=white",
+      "https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi&logoColor=white",
+      "https://img.shields.io/badge/Express.js-404D59?style=flat&logo=express&logoColor=white"
+    ],
     level: 90,
     color: "from-green-400 to-emerald-600"
   },
   "Mobile": {
     icon: <Smartphone className="w-8 h-8" />,
-    techs: ["React Native", "Flutter", "Swift", "Kotlin"],
+    badges: [
+      "https://img.shields.io/badge/React_Native-20232A?style=flat&logo=react&logoColor=61DAFB",
+      "https://img.shields.io/badge/Flutter-02569B?style=flat&logo=flutter&logoColor=white",
+      "https://img.shields.io/badge/Swift-FA7343?style=flat&logo=swift&logoColor=white",
+      "https://img.shields.io/badge/Kotlin-7F52FF?style=flat&logo=kotlin&logoColor=white"
+    ],
     level: 85,
     color: "from-purple-400 to-pink-600"
   },
   "IA & ML": {
     icon: <Brain className="w-8 h-8" />,
-    techs: ["TensorFlow", "PyTorch", "Scikit-learn", "OpenAI", "LangChain", "Hugging Face"],
+    badges: [
+      "https://img.shields.io/badge/TensorFlow-FF6F00?style=flat&logo=tensorflow&logoColor=white",
+      "https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white",
+      "https://img.shields.io/badge/scikit--learn-F7931E?style=flat&logo=scikit-learn&logoColor=white",
+      "https://img.shields.io/badge/OpenAI-74aa9c?style=flat&logo=openai&logoColor=white",
+      "https://img.shields.io/badge/Hugging_Face-FFD21E?style=flat&logo=huggingface&logoColor=black",
+      "https://img.shields.io/badge/Rasa-5A5E9C?style=flat&logo=rasa&logoColor=white"
+    ],
     level: 88,
     color: "from-orange-400 to-red-600"
   },
   "Cloud & DevOps": {
     icon: <Cloud className="w-8 h-8" />,
-    techs: ["AWS", "Azure", "Docker", "Kubernetes", "Jenkins", "GitHub Actions"],
+    badges: [
+      "https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazonaws&logoColor=white",
+      "https://img.shields.io/badge/Microsoft%20Azure-0089D6?style=flat&logo=microsoftazure&logoColor=white",
+      "https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white",
+      "https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white",
+      "https://img.shields.io/badge/Jenkins-D24939?style=flat&logo=jenkins&logoColor=white",
+      "https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat&logo=githubactions&logoColor=white"
+    ],
     level: 92,
     color: "from-blue-400 to-indigo-600"
   },
   "Database": {
     icon: <Code className="w-8 h-8" />,
-    techs: ["PostgreSQL", "MongoDB", "MySQL", "Redis", "Elasticsearch"],
+    badges: [
+      "https://img.shields.io/badge/PostgreSQL-316192?style=flat&logo=postgresql&logoColor=white",
+      "https://img.shields.io/badge/MongoDB-4EA94B?style=flat&logo=mongodb&logoColor=white",
+      "https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white",
+      "https://img.shields.io/badge/Redis-DC382D?style=flat&logo=redis&logoColor=white",
+      "https://img.shields.io/badge/Elasticsearch-005571?style=flat&logo=elasticsearch&logoColor=white"
+    ],
     level: 87,
     color: "from-yellow-400 to-orange-600"
   }
@@ -410,10 +451,14 @@ const CTAButtons = ({ scrollToSection }: { scrollToSection: (section: string) =>
       <span>Contactar</span>
     </button>
     
-    <button className="px-8 py-4 border-2 border-yellow-500 text-yellow-500 rounded-xl font-medium transition-all duration-300 hover:scale-105 hover:bg-yellow-500 hover:text-black flex items-center justify-center space-x-2">
+    <a 
+      href="/cv/John_Paul_Mamani_CV.pdf"
+      download="John_Paul_Mamani_CV.pdf"
+      className="px-8 py-4 border-2 border-yellow-500 text-yellow-500 rounded-xl font-medium transition-all duration-300 hover:scale-105 hover:bg-yellow-500 hover:text-black flex items-center justify-center space-x-2"
+    >
       <Download className="w-5 h-5" />
       <span>Descargar CV</span>
-    </button>
+    </a>
   </div>
 );
 
@@ -650,11 +695,50 @@ export default function Portfolio() {
                 <div className="space-y-4">
                   
                   <div className="flex items-center space-x-3">
-                    <div className="w-14 h-14  rounded-lg flex items-center justify-center p-1">
+                    <div className="w-14 h-14 rounded-lg flex items-center justify-center p-1 relative logo-upc-container">
+                      <style jsx>{`
+                        .logo-upc-container:before,
+                        .logo-upc-container:after {
+                          content: "";
+                          position: absolute;
+                          top: 50%;
+                          left: 50%;
+                          width: 100%;
+                          height: 100%;
+                          border-radius: 12px;
+                          background: linear-gradient(135deg, rgb(239, 68, 68), rgb(185, 28, 28));
+                          opacity: 0;
+                          transform: translate(-50%, -50%) scale(0);
+                          animation: ondaUPC 2s infinite;
+                        }
+                        .logo-upc-container:before {
+                          animation-delay: 0.5s;
+                        }
+                        .logo-upc-container:after {
+                          animation-delay: 1s;
+                        }
+                        .logo-upc-container img {
+                          position: relative;
+                          z-index: 2;
+                        }
+                        @keyframes ondaUPC {
+                          0% {
+                            transform: translate(-50%, -50%) scale(0);
+                            opacity: 0;
+                          }
+                          15% {
+                            opacity: 0.7;
+                          }
+                          100% {
+                            opacity: 0;
+                            transform: translate(-50%, -50%) scale(2);
+                          }
+                        }
+                      `}</style>
                       <Image 
                         src="/images/logo-upc.png" 
                         alt="UPC Logo" 
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-contain hover:scale-110 transition-transform duration-300"
                         width={56}
                         height={56}
                       />
@@ -762,13 +846,13 @@ export default function Portfolio() {
                 </div>
                 
                 <div className="flex flex-wrap gap-2">
-                  {data.techs.map((tech, index) => (
-                    <span 
+                  {data.badges.map((badgeUrl, index) => (
+                    <img 
                       key={index} 
-                      className="bg-gray-700 text-white px-3 py-1 rounded-full text-sm hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-500 transition-all cursor-default transform hover:scale-105"
-                    >
-                      {tech}
-                    </span>
+                      src={badgeUrl}
+                      alt="Technology Badge"
+                      className="h-8 hover:scale-105 transition-transform cursor-default"
+                    />
                   ))}
                 </div>
               </div>
