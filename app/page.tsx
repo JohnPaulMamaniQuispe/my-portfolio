@@ -37,8 +37,8 @@ const STATS = [
 
 const PROJECTS = [
   {
-    title: "🤖 Omnisapiens - Agente Inteligente Multimodal",
-    description: "🚀 Sistema de Agente Inteligente Multimodal y Omnicanal (SAIMO) que revoluciona la atención al cliente en PYMEs. Utiliza Deep Learning, NLP avanzado e IA generativa para procesar y responder automáticamente consultas en múltiples formatos: texto, voz, imágenes y documentos. Transforma la experiencia del cliente con respuestas inteligentes 24/7.",
+    title: "Omnisapiens - Agente Inteligente Multimodal y Omnicanal",
+    description: " Omnisapiens es una solución SaaS que transforma la atención al cliente en PYMEs peruanas y latinoamericanas mediante un agente inteligente multimodal y omnicanal. Utiliza IA generativa y procesamiento de lenguaje natural (NLP) para gestionar consultas en canales como WhatsApp, Telegram y Email. En Perú, el 99.6% de las empresas son PYMEs, pero solo el 47% usa canales digitales, lo que limita su competitividad. Omnisapiens ofrece una solución accesible y escalable, permitiendo a las PYMEs digitalizarse y automatizar su atención al cliente sin grandes inversiones ni conocimientos técnicos.",
     tech: ["Python", "Deep Learning", "NLP", "IA Generativa", "FastAPI", "TensorFlow"],
     status: "🚀 En desarrollo",
     type: "🎓 Tesis/Investigación",
@@ -46,19 +46,31 @@ const PROJECTS = [
     demo: "https://omnisapiens.netlify.app/",
     paper: "/papers/ARTIIS_2025_Omnisapiens_Paper.pdf",
     highlight: true,
-    metrics: "Paper enviado a revisión internacional"
+    metrics: "Long Paper enviado a revisión internacional"
   },
   {
-    title: "🎵 WORBUM - Plataforma Musical Sincronizada",
-    description: "Aplicación innovadora de sincronización musical en tiempo real con microservicios escalables. Permite reproducción simultánea en múltiples dispositivos sin latencia.",
-    tech: ["Node.js", "Angular", "Flutter", "Swift", "Azure", "Docker"],
+    title: "Rumba  - Plataforma Musical Sincronizada",
+    description: "Rumba es una plataforma musical tipo Spotify que permite la reproducción sincronizada de música en tiempo real en múltiples dispositivos, tanto Android como iOS, sin latencia. Gracias a la interoperabilidad con Spotify y Youtube, los usuarios pueden producir música simultáneamente y sincronizarla en varios celulares, creando una experiencia colaborativa única. Este reto tecnológico ha sido resuelto mediante una arquitectura de microservicios escalables, con un frontend desarrollado en Swift y Flutter, garantizando una experiencia fluida y de alta calidad. Rumba  está disponible en la App Store y Google Play.",
+    tech: ["Node.js", "Angular", "Flutter", "Swift", "Azure", "Docker", "Spotify API"],
     status: "✅ Producción",
     type: "🌐 Full Stack",
     github: "https://github.com/johnmamani",
-    demo: "#",
+    demo: "https://apps.apple.com/pe/app/rumba-free/id6736374623",
     highlight: true,
     metrics: "1000+ usuarios activos"
   },
+  {
+    title: "🎫 Tiquetón Perú - Plataforma de Ticketing Blockchain",
+    description: "Tiquetón es una plataforma de ticketing basada en **blockchain** diseñada especialmente para **PYMEs** y **organizadores de eventos** que buscan gestionar sus propios eventos sin las altas comisiones de plataformas grandes. A medida que crecen, pueden personalizar la gestión de sus entradas con la seguridad de **smart contracts** inmutables. Los usuarios pueden transferir sus entradas de forma segura, garantizando trazabilidad y protección tanto para el comprador como para el vendedor. Este enfoque innovador maximiza la seguridad, la transparencia y los ingresos del evento, ofreciendo una experiencia sin fraude y sin intermediarios costosos.",
+    tech: ["Solidity", "React", "Web3.js", "Hardhat", "IPFS", "Smart Contracts"],
+    status: "✅ Implementado",
+    type: "⛓️ Blockchain + Eventos",
+    github: "https://github.com/johnmamani",
+    demo: "https://tiqueton.netlify.app/",
+    metrics: "0% de falsificación de tickets, 100% transparencia en transacciones"
+  }
+   
+,
   {
     title: "🛒 E-commerce con IA Predictiva",
     description: "Plataforma de comercio electrónico con sistema de recomendaciones basado en ML y análisis predictivo avanzado del comportamiento del usuario.",
@@ -69,16 +81,7 @@ const PROJECTS = [
     demo: "#",
     metrics: "35% aumento en conversiones"
   },
-  {
-    title: "🎫 THE BIG FUN - Plataforma de Ticketing Blockchain",
-    description: "Sistema avanzado de gestión y venta de entradas para conciertos con blockchain. Utiliza smart contracts para prevenir falsificación de tickets, garantizar trazabilidad completa en transferencias y generar tokens únicos con hash que protegen tanto al vendedor anterior como al comprador actual. Maximiza seguridad e ingresos del evento.",
-    tech: ["Solidity", "React", "Web3.js", "Hardhat", "IPFS", "Smart Contracts"],
-    status: "✅ Implementado",
-    type: "⛓️ Blockchain + Eventos",
-    github: "https://github.com/johnmamani",
-    demo: "https://tiqueton.netlify.app/",
-    metrics: "0% tickets falsificados"
-  },
+  
   {
     title: "🏢 Sistema de Gestión Empresarial",
     description: "ERP completo y escalable con módulos de inventario, facturación, RRHH y reportes analíticos en tiempo real con dashboards interactivos.",
@@ -185,7 +188,7 @@ const EXPERIENCE = [
     period: "Abril 2025 - Presente",
     description: "Liderazgo en desarrollo de agente inteligente multimodal para PYMEs usando Deep Learning y NLP. Gestión completa del proyecto desde la concepción hasta la implementación.",
     icon: "🎓",
-    achievements: ["Paper aceptado en ARTIIS 2025", "90% precisión en respuestas automáticas", "Equipo de 5 desarrolladores"]
+    achievements: ["Paper enviado a la conferencia  ARTIIS 2025", "90% precisión en respuestas automáticas", "Equipo de 5 desarrolladores"]
   },
   {
     company: "💼 WORBUM S.A.C",
@@ -976,7 +979,7 @@ export default function Portfolio() {
               © 2025 {PERSONAL_INFO.name}. Todos los derechos reservados.
             </p>
             <p className="text-gray-500 text-sm mt-2">
-              Desarrollado con ❤️ usando Next.js, React, Tailwind CSS y mucho café ☕
+              Desarrollado con amor usando Next.js, React, Tailwind CSS y mucho café 
             </p>
           </div>
         </div>
