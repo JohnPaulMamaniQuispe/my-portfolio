@@ -1,7 +1,8 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, Phone, MapPin,  ChevronDown, Menu, X, Code, Database, Cloud, Brain, Smartphone, Globe, Star, Zap, Award, Rocket, Download, Play } from 'lucide-react';
+import Image from 'next/image';
+import { Github, Linkedin, Mail, Phone, MapPin, ChevronDown, Menu, X, Code, Database, Cloud, Brain, Smartphone, Globe, Star, Zap, Award, Rocket, Download, Play } from 'lucide-react';
 
 // =================================
 //  DATOS DEL PORTAFOLIO
@@ -251,9 +252,11 @@ const WhatsAppButton = () => (
       rel="noopener noreferrer"
       title="Contactar por WhatsApp"
     >
-      <img 
+      <Image 
         src={PERSONAL_INFO.whatsappLogo}
-        alt="WhatsApp" 
+        alt="WhatsApp"
+        width={50}
+        height={50}
       />
     </a>
   </>
@@ -329,11 +332,13 @@ const ProfileAvatar = () => (
     <div className="w-48 h-48 mx-auto relative group">
       <div className="absolute -inset-1 bg-gradient-to-r from-orange-400 to-yellow-500 rounded-full"></div>
       <div className="relative w-full h-full bg-gray-900 rounded-full overflow-hidden border-4 border-gray-900">
-        <img 
+        <Image 
           src={PERSONAL_INFO.photo}
           alt={`${PERSONAL_INFO.name} - Software Engineer`}
           className="w-full h-full object-cover object-top"
           style={{ objectPosition: 'center top' }}
+          width={192}
+          height={192}
           onError={(e) => {
             const target = e.target as HTMLImageElement;
             target.style.display = 'none';
@@ -413,8 +418,8 @@ const CTAButtons = ({ scrollToSection }: { scrollToSection: (section: string) =>
 );
 
 // Componente: Tarjeta de Proyecto
-const ProjectCard = ({ project, index }: { project: typeof PROJECTS[0]; index: number }) => (
-  <div className={`bg-gray-800/50 rounded-xl overflow-hidden transition-all duration-300 border border-gray-700 hover:border-orange-500/50 hover:scale-105 hover:shadow-xl hover:shadow-orange-500/10 ${project.highlight ? 'ring-2 ring-orange-500/50' : ''}`}>
+const ProjectCard = ({ project }: { project: typeof PROJECTS[0] }) => (
+  <div className={`relative bg-gray-800/50 rounded-xl overflow-hidden transition-all duration-300 border border-gray-700 hover:border-orange-500/50 hover:scale-105 hover:shadow-xl hover:shadow-orange-500/10 ${project.highlight ? 'ring-2 ring-orange-500/50' : ''}`}>
     {project.highlight && (
       <div className="absolute top-4 right-4 z-10">
         <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold flex items-center space-x-1">
@@ -646,10 +651,12 @@ export default function Portfolio() {
                   
                   <div className="flex items-center space-x-3">
                     <div className="w-14 h-14  rounded-lg flex items-center justify-center p-1">
-                      <img 
+                      <Image 
                         src="/images/logo-upc.png" 
                         alt="UPC Logo" 
                         className="w-full h-full object-contain"
+                        width={56}
+                        height={56}
                       />
                     </div>
                     <div>
@@ -665,10 +672,12 @@ export default function Portfolio() {
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-14 h-14  rounded-lg flex items-center justify-center p-1">
-                      <img 
+                      <Image 
                         src="/images/logo-utp.png" 
                         alt="UTP Logo" 
                         className="w-full h-full object-contain"
+                        width={56}
+                        height={56}
                       />
                     </div>
                     <div>
@@ -716,7 +725,7 @@ export default function Portfolio() {
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {PROJECTS.map((project, index) => (
-              <ProjectCard key={index} project={project} index={index} />
+              <ProjectCard key={index} project={project} />
             ))}
           </div>
         </div>
@@ -875,7 +884,7 @@ export default function Portfolio() {
               © 2025 {PERSONAL_INFO.name}. Todos los derechos reservados.
             </p>
             <p className="text-gray-500 text-sm mt-2">
-              Desarrollado con  usando Next.js, React, Tailwind CSS y mucho cafè
+              Desarrollado con ❤️ usando Next.js, React, Tailwind CSS y mucho café ☕
             </p>
           </div>
         </div>
