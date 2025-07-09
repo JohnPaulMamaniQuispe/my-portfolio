@@ -43,8 +43,8 @@ const PROJECTS = [
     status: "🚀 En desarrollo",
     type: "🎓 Tesis/Investigación",
     github: "https://github.com/JohnPaulMamaniQuispe",
+    demo: "https://omnisapiens.netlify.app/",
     paper: "/papers/ARTIIS_2025_Omnisapiens_Paper.pdf",
-    paperTitle: "📄 Ver Paper ARTIIS 2025",
     highlight: true,
     metrics: "Paper enviado a revisión internacional"
   },
