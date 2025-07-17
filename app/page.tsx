@@ -8,7 +8,7 @@ import { Github, Linkedin, Mail, Phone, MapPin, ChevronDown, Menu, X, Code, Data
 //  DATOS DEL PORTAFOLIO
 // =================================
 const PERSONAL_INFO = {
-  name: "John Paul Mamani",
+  name: "John Paul Mamani Quispe",
   title: "Software Engineer & AI Enthusiast",
   phone: "+51 986 838 404",
   email: "john.jpmq@gmail.com",
@@ -21,11 +21,11 @@ const PERSONAL_INFO = {
 };
 
 const TYPING_ROLES = [
-  "Software Engineer 💻",
-  "AI Enthusiast 🤖", 
-  "Full Stack Developer 🚀",
+  "Software Engineer",
+  "AI Enthusiast ", 
+  "Full Stack Developer ",
   "Cloud Architect ☁️",
-  "ML Engineer 🧠"
+  "ML Engineer "
 ];
 
 const STATS = [
@@ -40,7 +40,7 @@ const PROJECTS = [
     title: "Omnisapiens - Agente Inteligente Multimodal y Omnicanal",
     description: " Omnisapiens es una solución SaaS que transforma la atención al cliente en PYMEs peruanas y latinoamericanas mediante un agente inteligente multimodal y omnicanal. Utiliza IA generativa y procesamiento de lenguaje natural (NLP) para gestionar consultas en canales como WhatsApp, Telegram y Email. En Perú, el 99.6% de las empresas son PYMEs, pero solo el 47% usa canales digitales, lo que limita su competitividad. Omnisapiens ofrece una solución accesible y escalable, permitiendo a las PYMEs digitalizarse y automatizar su atención al cliente sin grandes inversiones ni conocimientos técnicos.",
     tech: ["Python", "Deep Learning", "NLP", "IA Generativa", "FastAPI", "TensorFlow"],
-    status: "🚀 En desarrollo",
+    status: " En desarrollo",
     type: "🎓 Tesis/Investigación",
     github: "https://github.com/JohnPaulMamaniQuispe",
     demo: "https://omnisapiens.netlify.app/",
@@ -113,7 +113,7 @@ const SKILLS = {
       "https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white",
       "https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white"
     ],
-    level: 95,
+    level: 70,
     color: "from-cyan-400 to-blue-600"
   },
   "Backend": {
@@ -126,7 +126,7 @@ const SKILLS = {
       "https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi&logoColor=white",
       "https://img.shields.io/badge/Express.js-404D59?style=flat&logo=express&logoColor=white"
     ],
-    level: 90,
+    level: 80,
     color: "from-green-400 to-emerald-600"
   },
   "Mobile": {
@@ -137,7 +137,7 @@ const SKILLS = {
       "https://img.shields.io/badge/Swift-FA7343?style=flat&logo=swift&logoColor=white",
       "https://img.shields.io/badge/Kotlin-7F52FF?style=flat&logo=kotlin&logoColor=white"
     ],
-    level: 85,
+    level: 69,
     color: "from-purple-400 to-pink-600"
   },
   "IA & ML": {
@@ -150,7 +150,7 @@ const SKILLS = {
       "https://img.shields.io/badge/Hugging_Face-FFD21E?style=flat&logo=huggingface&logoColor=black",
       "https://img.shields.io/badge/Rasa-5A5E9C?style=flat&logo=rasa&logoColor=white"
     ],
-    level: 88,
+    level: 68,
     color: "from-orange-400 to-red-600"
   },
   "Cloud & DevOps": {
@@ -163,7 +163,7 @@ const SKILLS = {
       "https://img.shields.io/badge/Jenkins-D24939?style=flat&logo=jenkins&logoColor=white",
       "https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat&logo=githubactions&logoColor=white"
     ],
-    level: 92,
+    level: 65,
     color: "from-blue-400 to-indigo-600"
   },
   "Database": {
@@ -175,7 +175,7 @@ const SKILLS = {
       "https://img.shields.io/badge/Redis-DC382D?style=flat&logo=redis&logoColor=white",
       "https://img.shields.io/badge/Elasticsearch-005571?style=flat&logo=elasticsearch&logoColor=white"
     ],
-    level: 87,
+    level: 68,
     color: "from-yellow-400 to-orange-600"
   }
 };
