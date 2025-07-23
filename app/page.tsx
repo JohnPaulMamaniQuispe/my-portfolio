@@ -781,7 +781,7 @@ export default function Portfolio() {
                         <div className="w-full bg-gray-700 rounded-full h-2">
                           <div className="bg-gradient-to-r from-yellow-400 to-orange-400 h-2 rounded-full" style={{width: '100%'}}></div>
                         </div>
-                        <span className="text-sm text-yellow-400 font-medium">100%</span>
+                        <span className="text-sm text-green-400 font-medium"></span>
                       </div>
                     </div>
                   </div>
@@ -815,7 +815,7 @@ export default function Portfolio() {
       <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
-            Proyectos Destacados 🚀
+            Proyectos Destacados 
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {PROJECTS.map((project, index) => (
@@ -829,7 +829,7 @@ export default function Portfolio() {
       <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
-            Habilidades Técnicas 💻
+            Habilidades Técnicas 
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {Object.entries(SKILLS).map(([category, data]) => (
@@ -875,7 +875,7 @@ export default function Portfolio() {
       <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
-            Experiencia Profesional 💼
+            Experiencia Profesional 
           </h2>
           <div className="space-y-8">
             {EXPERIENCE.map((exp, index) => (
