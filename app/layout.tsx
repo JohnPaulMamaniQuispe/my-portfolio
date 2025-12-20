@@ -5,44 +5,54 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "John Paul Mamani - Software Engineer & AI Enthusiast",
+  title: "John Paul Mamani - Senior Software Engineer | AI/ML Specialist",
   description:
-    "Portafolio profesional de John Paul Mamani Quispe - Especializado en desarrollo full stack, IA generativa y soluciones cloud escalables.",
+    "Senior Software Engineer at NTT DATA & BCP with expertise in AI/ML, distributed systems, and cloud architecture. Building high-impact solutions serving 10M+ users and processing $100M+ daily transactions. Published AI researcher with proven track record in scalable enterprise systems.",
   keywords: [
-    "Software Engineer",
-    "Full Stack Developer",
-    "AI",
+    "Senior Software Engineer",
+    "AI Engineer",
     "Machine Learning",
+    "Cloud Architecture",
+    "Distributed Systems",
+    "Full Stack Developer",
+    "NTT DATA",
+    "BCP",
+    "Banking Systems",
     "React",
     "Next.js",
+    "Python",
+    "AWS",
+    "Azure",
     "Lima",
-    "Perú",
+    "Peru",
+    "FAANG",
+    "Tech Lead",
   ],
   authors: [{ name: "John Paul Mamani Quispe" }],
   robots: "index, follow",
   openGraph: {
-    title: "John Paul Mamani - Software Engineer",
+    title: "John Paul Mamani - Senior Software Engineer | AI/ML Specialist",
     description:
-      "Especializado en desarrollo full stack, IA generativa y soluciones cloud escalables",
+      "Building mission-critical banking systems serving 10M+ users. Expert in AI/ML, distributed systems, and cloud architecture with proven high-impact results.",
     url: "https://johnpaulmamani.dev",
     siteName: "John Paul Mamani Portfolio",
-    locale: "es_PE",
+    locale: "en_US",
     type: "website",
     images: [
       {
-        url: "/web-app-manifest-512x512.png", // ✅ tu foto grande
+        url: "/web-app-manifest-512x512.png",
         width: 512,
         height: 512,
-        alt: "Foto de John Paul Mamani",
+        alt: "John Paul Mamani - Senior Software Engineer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "John Paul Mamani - Software Engineer",
+    title: "John Paul Mamani - Senior Software Engineer | AI/ML",
     description:
-      "Especializado en desarrollo full stack, IA generativa y soluciones cloud escalables",
-    images: ["/web-app-manifest-512x512.png"], // ✅ tu foto también en Twitter
+      "Building mission-critical systems at scale. Expert in AI/ML, distributed systems, and cloud architecture.",
+    images: ["/web-app-manifest-512x512.png"],
   },
   icons: {
     icon: [
