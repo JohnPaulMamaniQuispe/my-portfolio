@@ -41,17 +41,17 @@ export const translations: Record<'es' | 'en', Translation> = {
       achievements: 'Logros Clave',
       items: [
         {
-          company: 'NTT DATA & BCP - Banco de Crédito del Perú',
-          role: 'Senior Backend Developer - Microservices Architect',
-          period: 'jul. 2024 - actualidad · 5+ meses',
-          description: 'Desarrollo de microservicios cloud-native para Banca Móvil 3.0 (10M+ usuarios activos) utilizando Quarkus Framework con programación reactiva (Mutiny, SmallRye Reactive Messaging). Implementación de arquitecturas event-driven con Apache Kafka, Redis para caché distribuido y bases de datos PostgreSQL/MongoDB. Diseño de APIs RESTful bajo estándares BIAN (Banking Industry Architecture Network) con patrones empresariales: CQRS, Event Sourcing, Saga Pattern. Despliegue en Azure Kubernetes Service (AKS) con estrategias Blue-Green/Canary, pipelines CI/CD vía Azure DevOps. Gestión de secrets con HashiCorp Vault, service mesh con Consul. Monitoreo 24/7 con Prometheus, Grafana, ELK Stack. Coordinación con equipos QA, Frontend, DevOps, Arquitectos Empresariales y POs bajo Scrum/Kanban en sprints de 2 semanas.',
+          company: 'NTT DATA Europe & Latam & BCP - Banco de Crédito del Perú',
+          role: 'Backend Developer - Microservices',
+          period: 'sept. 2024 - actualidad · 4 meses',
+          description: 'Proyecto MBBK – BMO 3.0 Banca Móvil (10M+ usuarios activos), Squad Lending - Tribu Canales Digitales. Desarrollo de microservicios reactivos con Quarkus Framework (Java 21) para productos crediticios digitales bajo supervisión de líder técnica. Escritura de código implementando flujos de créditos con integración a sistemas bancarios, caché Redis optimizado y bases de datos PostgreSQL/MongoDB/DB2. Diseño de contratos OpenAPI 3.0 siguiendo arquitectura BIAN establecida y principios SOLID/POO. Ejecución de pruebas unitarias, integración, Contract Testing y colaboración estrecha con QA. Aprobación de APIs vía Gobierno Corporativo con test de vulnerabilidad y auditoría de seguridad. Aplicación de TDD, Code Review y BDD según lineamientos BCP. Despliegue en Kubernetes/OpenShift con pipelines CI/CD (Jenkins, GitLab). Participación activa en Daily (L-V), sesiones técnicas y ceremonias ágiles Scrum en sprints de 2 semanas.',
           achievements: [
-            '5+ microservicios en producción (10M+ usuarios)',
-            'Event-driven architecture con Kafka',
-            'APIs bajo estándar BIAN',
-            '99.99% SLA - Zero downtime',
-            'CI/CD Azure DevOps + GitOps',
-            'Quarkus + Redis + Kubernetes'
+            'Microservicios reactivos Quarkus + Mutiny',
+            'APIs OpenAPI 3.0 bajo estándar BIAN',
+            'Stack: Java 21, Redis, MongoDB, PostgreSQL, DB2',
+            'CI/CD: Jenkins + GitLab Pipelines',
+            'TDD, Contract Testing, Code Review',
+            'Gobierno de APIs + Auditoría de seguridad'
           ]
         },
         {
@@ -145,17 +145,17 @@ export const translations: Record<'es' | 'en', Translation> = {
       achievements: 'Key Achievements',
       items: [
         {
-          company: 'NTT DATA & BCP - Banco de Crédito del Perú',
-          role: 'Senior Backend Developer - Microservices Architect',
-          period: 'Sep 2024 - Present · 5+ months',
-          description: 'Development of cloud-native microservices for Banca Móvil 3.0 (10M+ active users) using Quarkus Framework with reactive programming (Mutiny, SmallRye Reactive Messaging). Implementation of event-driven architectures with Apache Kafka, Redis for distributed caching, and PostgreSQL/MongoDB databases. Design of RESTful APIs under BIAN standards (Banking Industry Architecture Network) with enterprise patterns: CQRS, Event Sourcing, Saga Pattern. Deployment on Azure Kubernetes Service (AKS) with Blue-Green/Canary strategies, CI/CD pipelines via Azure DevOps. Secrets management with HashiCorp Vault, service mesh with Consul. 24/7 monitoring with Prometheus, Grafana, ELK Stack. Coordination with QA, Frontend, DevOps teams, Enterprise Architects and POs under Scrum/Kanban in 2-week sprints.',
+          company: 'NTT DATA Europe & Latam & BCP - Banco de Crédito del Perú',
+          role: 'Backend Developer - Microservices',
+          period: 'Sep 2024 - Present · 4 months',
+          description: 'MBBK – BMO 3.0 Mobile Banking Project (10M+ active users), Squad Lending - Digital Channels Tribe. Development of reactive microservices with Quarkus Framework (Java 21) for digital credit products under technical leader supervision. Code writing implementing credit flows with banking systems integration, optimized Redis cache and PostgreSQL/MongoDB/DB2 databases. Design of OpenAPI 3.0 contracts following established BIAN architecture and SOLID/OOP principles. Execution of unit tests, integration, Contract Testing and close collaboration with QA. API approval via Corporate Governance with vulnerability testing and security audit. Application of TDD, Code Review and BDD according to BCP guidelines. Deployment on Kubernetes/OpenShift with CI/CD pipelines (Jenkins, GitLab). Active participation in Daily (M-F), technical sessions and Scrum agile ceremonies in 2-week sprints.',
           achievements: [
-            '5+ microservices in production (10M+ users)',
-            'Event-driven architecture with Kafka',
-            'APIs under BIAN standard',
-            '99.99% SLA - Zero downtime',
-            'CI/CD Azure DevOps + GitOps',
-            'Quarkus + Redis + Kubernetes'
+            'Reactive microservices Quarkus + Mutiny',
+            'OpenAPI 3.0 APIs under BIAN standard',
+            'Stack: Java 21, Redis, MongoDB, PostgreSQL, DB2',
+            'CI/CD: Jenkins + GitLab Pipelines',
+            'TDD, Contract Testing, Code Review',
+            'API Governance + Security Audit'
           ]
         },
         {
