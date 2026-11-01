@@ -31,7 +31,7 @@ export const Hero: React.FC<SectionProps & { scrollToSection: (section: string) 
     <div className="mx-auto max-w-5xl px-4 sm:px-6 grid md:grid-cols-[1fr_auto] gap-12 items-center">
       <div>
         <p className="font-mono text-sm text-accent mb-5">{ROLE}</p>
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight text-fg">
+        <h1 className="whitespace-nowrap text-[clamp(1.6rem,7vw,3rem)] md:text-[clamp(2.25rem,4.6vw,3.5rem)] font-semibold tracking-tight text-fg">
           {PERSONAL_INFO.name}
         </h1>
         <p className="mt-6 text-lg md:text-xl text-muted max-w-2xl leading-relaxed">{t.hero.title}</p>
@@ -78,12 +78,12 @@ export const Hero: React.FC<SectionProps & { scrollToSection: (section: string) 
 
       {/* Avatar: la foto completa encaja dentro del círculo */}
       <div className="order-first md:order-none justify-self-start md:justify-self-end">
-        <div className="relative w-36 h-36 md:w-60 md:h-60 rounded-full overflow-hidden ring-1 ring-line bg-surface">
+        <div className="relative w-36 h-36 md:w-48 md:h-48 lg:w-60 lg:h-60 rounded-full overflow-hidden ring-1 ring-line bg-surface">
           <Image
             src={PERSONAL_INFO.photo}
             alt={PERSONAL_INFO.name}
             fill
-            sizes="(min-width: 768px) 240px, 144px"
+            sizes="(min-width: 1024px) 240px, (min-width: 768px) 192px, 144px"
             className="object-contain object-bottom"
             priority
           />
