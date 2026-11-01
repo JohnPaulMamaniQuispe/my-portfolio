@@ -1,34 +1,19 @@
-import { Linkedin, Mail, Phone, Globe, Database, Cloud, Brain, Smartphone, Code, Award, Zap, Star } from 'lucide-react';
-import { Project, Skill, Experience, Achievement, ContactInfo, Stat } from './types';
+import { Linkedin, Mail, Phone, Database, Cloud, Brain, Smartphone, Code, Network, Award, Zap, Star } from 'lucide-react';
+import { Project, Skill, Experience, Achievement, ContactInfo, Certification } from './types';
 
 export const PERSONAL_INFO = {
   name: "John Paul Mamani Quispe",
-  title: "Senior Software Engineer | AI/ML Specialist | Cloud Architect",
+  title: "Senior Software Engineer | Backend & Distributed Systems | Java | Microservices | Cloud-Native | AI Engineering | System Design",
   phone: "+51 986 838 404",
   email: "john.jpmq@gmail.com",
   location: "Lima, Perú",
-  photo: "/images/johnpaulmq.png",
+  photo: "/images/johnpmq.png",
   whatsappLogo: "/images/whatsappLogo.png",
   github: "https://github.com/JohnPaulMamaniQuispe",
   linkedin: "https://www.linkedin.com/in/john-paul-mamani-quispe-159129b3",
   tiktok: "https://www.tiktok.com/@johnpaulmamani",
   whatsappMessage: "Hola John Paul, me interesa conocer más sobre tus servicios de desarrollo de software"
 } as const;
-
-export const TYPING_ROLES = [
-  "Senior Software Engineer",
-  "AI/ML Specialist", 
-  "Cloud Solutions Architect",
-  "Full-Stack Engineer",
-  "Tech Lead & Innovator"
-] as const;
-
-export const STATS: Stat[] = [
-  { value: "10K+", label: "Users Impacted", color: "text-cyan-400" },
-  { value: "99.9%", label: "Uptime SLA", color: "text-emerald-400" },
-  { value: "40%", label: "Performance ↑", color: "text-purple-400" },
-  { value: "30+", label: "Tech Stack", color: "text-pink-400" }
-];
 
 export const PROJECTS: Project[] = [
   {
@@ -49,7 +34,7 @@ export const PROJECTS: Project[] = [
     tech: ["Node.js", "TypeScript", "Flutter", "Swift", "WebRTC", "WebSockets", "Azure", "Docker", "Kubernetes", "Redis", "MongoDB"],
     status: "Live on App Store & Play Store",
     type: "Real-Time Systems & Mobile",
-    github: "https://github.com/johnmamani",
+    github: PERSONAL_INFO.github,
     demo: "https://apps.apple.com/pe/app/rumba-free/id6736374623",
     highlight: true,
     metrics: "10K+ users • <50ms sync latency • 99.9% uptime • 1M+ API calls/month"
@@ -60,7 +45,7 @@ export const PROJECTS: Project[] = [
     tech: ["Solidity", "Ethereum", "Polygon", "React", "Web3.js", "Hardhat", "IPFS", "ERC-721", "MetaMask", "The Graph"],
     status: "Live on Polygon Mainnet",
     type: "Blockchain & Web3",
-    github: "https://github.com/johnmamani",
+    github: PERSONAL_INFO.github,
     demo: "https://tiqueton.netlify.app/",
     metrics: "0% fraud rate • 95% lower gas fees • 3% platform fee vs 15% industry avg"
   },
@@ -70,8 +55,7 @@ export const PROJECTS: Project[] = [
     tech: ["Next.js", "Python", "TensorFlow", "scikit-learn", "AWS SageMaker", "Stripe", "PostgreSQL", "Redis", "Elasticsearch"],
     status: "Production",
     type: "ML/AI & Full Stack",
-    github: "https://github.com/johnmamani",
-    demo: "#",
+    github: PERSONAL_INFO.github,
     metrics: "35% conversion ↑ • 28% AOV ↑ • 500K+ daily events • $1M+ processed"
   },
   {
@@ -80,8 +64,7 @@ export const PROJECTS: Project[] = [
     tech: ["Vue.js", "Spring Boot", "Java", "MySQL", "Docker"],
     status: "Completado",
     type: "Enterprise",
-    github: "https://github.com/johnmamani",
-    demo: "#",
+    github: PERSONAL_INFO.github,
     metrics: "500+ empresas usando"
   },
   {
@@ -90,91 +73,93 @@ export const PROJECTS: Project[] = [
     tech: ["Python", "MLflow", "Apache Airflow", "Docker", "Kubernetes"],
     status: "Completado",
     type: "MLOps",
-    github: "https://github.com/johnmamani",
-    demo: "#",
+    github: PERSONAL_INFO.github,
     metrics: "99.5% uptime"
   }
 ];
 
+// Badges de tecnologías: color de marca y logo de simpleicons.org (vía shields.io)
+const NEUTRAL = "2B3137";
 export const SKILLS: Record<string, Skill> = {
-  "Frontend": {
-    icon: <Globe className="w-8 h-8" />,
-    badges: [
-      "https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB",
-      "https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs&logoColor=white",
-      "https://img.shields.io/badge/Angular-DD0031?style=flat&logo=angular&logoColor=white",
-      "https://img.shields.io/badge/Vue.js-35495E?style=flat&logo=vuedotjs&logoColor=4FC08D",
-      "https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white",
-      "https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white"
-    ],
-    level: 70,
-    color: "from-cyan-400 to-blue-500"
-  },
   "Backend": {
-    icon: <Database className="w-8 h-8" />,
-    badges: [
-      "https://img.shields.io/badge/Node.js-43853D?style=flat&logo=node.js&logoColor=white",
-      "https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white",
-      "https://img.shields.io/badge/Java-ED8B00?style=flat&logo=java&logoColor=white",
-      "https://img.shields.io/badge/Spring-6DB33F?style=flat&logo=spring&logoColor=white",
-      "https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi&logoColor=white",
-      "https://img.shields.io/badge/Express.js-404D59?style=flat&logo=express&logoColor=white"
-    ],
-    level: 80,
-    color: "from-emerald-400 to-teal-500"
+    icon: <Code className="w-5 h-5" />,
+    items: [
+      { name: "Java 21", logo: "openjdk", color: "ED8B00" },
+      { name: "Quarkus", logo: "quarkus", color: "4695EB" },
+      { name: "Spring Boot", logo: "springboot", color: "6DB33F" },
+      { name: "Node.js", logo: "nodedotjs", color: "339933" },
+      { name: "Python", logo: "python", color: "3776AB" },
+      { name: "FastAPI", logo: "fastapi", color: "009688" }
+    ]
   },
-  "Mobile": {
-    icon: <Smartphone className="w-8 h-8" />,
-    badges: [
-      "https://img.shields.io/badge/React_Native-20232A?style=flat&logo=react&logoColor=61DAFB",
-      "https://img.shields.io/badge/Flutter-02569B?style=flat&logo=flutter&logoColor=white",
-      "https://img.shields.io/badge/Swift-FA7343?style=flat&logo=swift&logoColor=white",
-      "https://img.shields.io/badge/Kotlin-7F52FF?style=flat&logo=kotlin&logoColor=white"
-    ],
-    level: 69,
-    color: "from-purple-400 to-pink-500"
+  "Architecture": {
+    icon: <Network className="w-5 h-5" />,
+    items: [
+      { name: "Microservices", color: NEUTRAL },
+      { name: "Event-Driven", color: NEUTRAL },
+      { name: "Hexagonal", color: NEUTRAL },
+      { name: "DDD", color: NEUTRAL },
+      { name: "OpenAPI", logo: "openapiinitiative", color: "6BA539" },
+      { name: "BIAN", color: NEUTRAL },
+      { name: "SOLID · Clean Code", color: NEUTRAL }
+    ]
   },
-  "IA & ML": {
-    icon: <Brain className="w-8 h-8" />,
-    badges: [
-      "https://img.shields.io/badge/TensorFlow-FF6F00?style=flat&logo=tensorflow&logoColor=white",
-      "https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white",
-      "https://img.shields.io/badge/scikit--learn-F7931E?style=flat&logo=scikit-learn&logoColor=white",
-      "https://img.shields.io/badge/OpenAI-74aa9c?style=flat&logo=openai&logoColor=white",
-      "https://img.shields.io/badge/Hugging_Face-FFD21E?style=flat&logo=huggingface&logoColor=black",
-      "https://img.shields.io/badge/Rasa-5A5E9C?style=flat&logo=rasa&logoColor=white"
-    ],
-    level: 68,
-    color: "from-orange-400 to-red-500"
+  "Messaging & Data": {
+    icon: <Database className="w-5 h-5" />,
+    items: [
+      { name: "Apache Kafka", logo: "apachekafka", color: "231F20" },
+      { name: "Redis", logo: "redis", color: "DC382D" },
+      { name: "Azure SQL", logo: "microsoftazure", color: "0078D4" },
+      { name: "PostgreSQL", logo: "postgresql", color: "4169E1" },
+      { name: "MongoDB", logo: "mongodb", color: "47A248" },
+      { name: "DB2", color: "052FAD" }
+    ]
   },
   "Cloud & DevOps": {
-    icon: <Cloud className="w-8 h-8" />,
-    badges: [
-      "https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazonaws&logoColor=white",
-      "https://img.shields.io/badge/Microsoft%20Azure-0089D6?style=flat&logo=microsoftazure&logoColor=white",
-      "https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white",
-      "https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white",
-      "https://img.shields.io/badge/Jenkins-D24939?style=flat&logo=jenkins&logoColor=white",
-      "https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat&logo=githubactions&logoColor=white"
-    ],
-    level: 65,
-    color: "from-blue-400 to-indigo-500"
+    icon: <Cloud className="w-5 h-5" />,
+    items: [
+      { name: "Azure AKS", logo: "microsoftazure", color: "0078D4" },
+      { name: "Kubernetes", logo: "kubernetes", color: "326CE5" },
+      { name: "Docker", logo: "docker", color: "2496ED" },
+      { name: "HashiCorp Vault", logo: "vault", color: "FFEC6E", logoColor: "black" },
+      { name: "Jenkins", logo: "jenkins", color: "D24939" },
+      { name: "GitLab CI", logo: "gitlab", color: "FC6D26" },
+      { name: "Grafana", logo: "grafana", color: "F46800" },
+      { name: "AWS Lambda", color: "FF9900" }
+    ]
   },
-  "Database": {
-    icon: <Code className="w-8 h-8" />,
-    badges: [
-      "https://img.shields.io/badge/PostgreSQL-316192?style=flat&logo=postgresql&logoColor=white",
-      "https://img.shields.io/badge/MongoDB-4EA94B?style=flat&logo=mongodb&logoColor=white",
-      "https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white",
-      "https://img.shields.io/badge/Redis-DC382D?style=flat&logo=redis&logoColor=white",
-      "https://img.shields.io/badge/Elasticsearch-005571?style=flat&logo=elasticsearch&logoColor=white"
-    ],
-    level: 68,
-    color: "from-yellow-400 to-amber-500"
+  "AI Engineering": {
+    icon: <Brain className="w-5 h-5" />,
+    items: [
+      { name: "LLMs", logo: "openai", color: "412991" },
+      { name: "RAG", color: NEUTRAL },
+      { name: "AI Agents", color: NEUTRAL },
+      { name: "Tool Calling", color: NEUTRAL },
+      { name: "LangGraph", logo: "langgraph", color: "1C3C3C" },
+      { name: "CrewAI", logo: "crewai", color: "FF5A50" },
+      { name: "Semantic Kernel", color: "5C2D91" },
+      { name: "OpenAI Agents SDK", logo: "openai", color: "412991" }
+    ]
+  },
+  "Frontend & Mobile": {
+    icon: <Smartphone className="w-5 h-5" />,
+    items: [
+      { name: "React", logo: "react", color: "20232A", logoColor: "61DAFB" },
+      { name: "Next.js", logo: "nextdotjs", color: "000000" },
+      { name: "TypeScript", logo: "typescript", color: "3178C6" },
+      { name: "Angular", logo: "angular", color: "DD0031" },
+      { name: "Vue.js", logo: "vuedotjs", color: "35495E", logoColor: "4FC08D" },
+      { name: "Flutter", logo: "flutter", color: "02569B" },
+      { name: "Swift", logo: "swift", color: "F05138" }
+    ]
   }
 };
 
 export const EXPERIENCE: Experience[] = [
+  {
+    icon: "/images/coforge.png",
+    onLight: true
+  },
   {
     icon: "/images/ntt_data.png"
   },
@@ -193,26 +178,22 @@ export const ACHIEVEMENTS: Achievement[] = [
   {
     icon: Award,
     title: "Published AI Researcher",
-    description: "Long paper accepted at CSCI 2025 (Springer Nature) - 80% rating, top 5% conference",
-    color: "from-purple-400 to-pink-500"
+    description: "Long paper accepted at CSCI 2025 (Springer Nature) - 80% rating, top 5% conference"
   },
   {
     icon: Zap,
     title: "High-Impact Systems",
-    description: "Serving 10M+ users in mission-critical banking systems (BCP)",
-    color: "from-cyan-400 to-blue-500"
+    description: "Serving 10M+ users in mission-critical banking systems (BCP)"
   },
   {
     icon: Brain,
     title: "Multimodal AI Agent",
-    description: "Digital human with vision (CLIP), audio (Whisper) & NLP (Mistral 7B)",
-    color: "from-emerald-400 to-teal-500"
+    description: "Digital human with vision (CLIP), audio (Whisper) & NLP (Mistral 7B)"
   },
   {
     icon: Star,
     title: "Production Excellence",
-    description: "99.99% uptime SLA - Zero downtime deployments with Kubernetes",
-    color: "from-amber-400 to-orange-500"
+    description: "99.99% uptime SLA - Zero downtime deployments with Kubernetes"
   }
 ];
 
@@ -221,32 +202,68 @@ export const CONTACT_INFO: ContactInfo[] = [
     icon: Mail, 
     title: "Email", 
     value: PERSONAL_INFO.email,
-    href: `mailto:${PERSONAL_INFO.email}`,
-    color: "from-red-400 to-pink-500",
-    hoverColor: "group-hover:text-red-400"
+    href: `mailto:${PERSONAL_INFO.email}`
   },
   { 
     icon: Phone, 
     title: "Phone", 
     value: PERSONAL_INFO.phone,
-    href: `tel:${PERSONAL_INFO.phone.replace(/\s/g, '')}`,
-    color: "from-emerald-400 to-teal-500",
-    hoverColor: "group-hover:text-emerald-400"
+    href: `tel:${PERSONAL_INFO.phone.replace(/\s/g, '')}`
   },
   { 
     icon: Linkedin, 
     title: "LinkedIn", 
     value: "johnpaulmamani",
-    href: PERSONAL_INFO.linkedin,
-    color: "from-blue-400 to-indigo-500",
-    hoverColor: "group-hover:text-blue-400"
+    href: PERSONAL_INFO.linkedin
   }
 ];
 
 export const COMPANIES = [
-  { name: "NTT DATA", logo: "/images/ntt_data.png", alt: "NTT DATA" },
-  { name: "BCP", logo: "/images/bcp_logo.png", alt: "Banco de Crédito del Perú" },
+  // cover: logos que traen su propio recuadro de color y deben rellenar la tarjeta
+  // onLight: logos oscuros con fondo transparente, van sobre tarjeta blanca
+  { name: "Coforge", logo: "/images/coforge.png", alt: "Coforge", onLight: true },
+  { name: "NTT DATA", logo: "/images/ntt_data.png", alt: "NTT DATA", cover: true },
+  { name: "BCP", logo: "/images/bcp_logo.png", alt: "Banco de Crédito del Perú", cover: true },
   { name: "Omnisapiens", logo: "/images/omnisapienslogo_light.png", alt: "Omnisapiens" },
   { name: "WORBUM", logo: null, alt: "WORBUM" },
   { name: "Betabyte", logo: "/images/beta-logo-blanco.png", alt: "Betabyte" }
 ] as const;
+
+// Certificados y honores. Para agregar uno:
+// - images: una o más hojas en /public/certificates (jpg/png) con su tamaño en píxeles
+// - file: documento completo (pdf/jpg) que se abre al hacer clic
+// - credentialUrl: enlace de verificación (Credly, AWS, Microsoft Learn, etc.)
+export const CERTIFICATIONS: Certification[] = [
+  {
+    type: "honor",
+    title: {
+      es: "Best Paper Award – FICTA 2026 (Springer)",
+      en: "Best Paper Award – FICTA 2026 (Springer)"
+    },
+    issuer: "14th FICTA-2026 · London Metropolitan University, UK",
+    date: "2026",
+    images: [{ src: "/certificates/best-paper-ficta-2026.jpg", width: 1560, height: 1080 }]
+  },
+  {
+    type: "honor",
+    title: {
+      es: "Paper aceptado en CSCI 2025 (Springer Nature)",
+      en: "Paper accepted at CSCI 2025 (Springer Nature)"
+    },
+    issuer: "CSCI 2025 · Las Vegas, USA",
+    date: "2025",
+    file: "/papers/CSCI_2025_Omnisapiens_Paper.pdf"
+  },
+  {
+    type: "degree",
+    title: {
+      es: "Bachiller en Ingeniería de Software",
+      en: "Bachelor of Science in Software Engineering"
+    },
+    issuer: "Universidad Peruana de Ciencias Aplicadas (UPC)",
+    date: "2026",
+    logo: "/images/logo-upc.png",
+    images: [{ src: "/certificates/bachiller-upc-1.jpg", width: 1454, height: 2264 }]
+  }
+
+];

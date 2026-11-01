@@ -8,20 +8,27 @@ export const translations: Record<'es' | 'en', Translation> = {
       projects: 'Proyectos',
       skills: 'Habilidades',
       experience: 'Experiencia',
+      certifications: 'Certificados',
       contact: 'Contacto'
     },
     hero: {
       greeting: '¡Hola! Soy',
-      title: 'Transformo ideas en soluciones digitales de alto impacto',
+      title: 'Construyo sistemas backend y plataformas cloud-native de misión crítica para banca digital.',
       btnProjects: 'Ver Proyectos',
-      btnResume: 'Descargar CV',
+      btnResume: 'Solicitar CV',
+      resumeSubject: 'Solicitud de CV - John Paul Mamani',
+      resumeBody: 'Hola John Paul,\n\nMe gustaría recibir tu CV actualizado.\n\nNombre:\nEmpresa:\nPuesto / oportunidad:\n\nGracias.',
+      resumeNote: 'CV disponible a solicitud personal:',
       btnContact: 'Contactar'
     },
     about: {
       title: 'Sobre Mí',
-      subtitle: 'Senior Software Engineer especializado en IA/ML, Cloud y Arquitectura de Sistemas de Alto Impacto',
-      description1: 'Egresado de Ingeniería de Software de la UPC (100% completado, en proceso de graduación) con enfoque en Backend Development y tecnologías emergentes. Actualmente trabajando en NTT DATA & BCP, desarrollando microservicios de misión crítica para Banca Móvil 3.0 que sirven a 10M+ usuarios activos. Experiencia práctica en arquitecturas reactivas, event-driven con Quarkus, Kafka y Kubernetes.',
-      description2: 'Mi pasión por la investigación científica y el análisis comparativo es el motor de mi trabajo. Paper aceptado en CSCI 2025 (Springer Nature, Las Vegas) con 80% de calificación global, presentando agente inteligente multimodal para PYMEs que integra CLIP (visión), Whisper (audio) y Mistral 7B (NLP). La investigación transforma vidas: demostrando que la IA puede cerrar la brecha digital en América Latina.'
+      subtitle: 'Senior Software Engineer | Backend & Sistemas Distribuidos | Java | Microservicios | Cloud-Native | AI Engineering | System Design',
+      description1: 'Software Engineer (B.Sc. en Ingeniería de Software – UPC) especializado en Backend Engineering, Microservicios, Sistemas Distribuidos y Arquitecturas Cloud-Native. Diseño y desarrollo plataformas empresariales para banca digital con Java 21, Quarkus, REST APIs, Apache Kafka, Redis y Azure SQL, aplicando OpenAPI y el estándar BIAN, Event-Driven Architecture, Arquitectura Hexagonal, DDD, SOLID y Clean Code. Despliego sobre Azure Kubernetes Service (AKS) con HPA, Ingress, ConfigMaps, Secrets y HashiCorp Vault, automatizando la entrega con CI/CD, Jenkins y prácticas DevSecOps.',
+      description2: 'Expando mi experiencia en AI Backend Engineering y Cloud Computing, desarrollando soluciones con Python, FastAPI, LLMs, AI Agents, RAG, Tool Calling, Context & Memory Management y AWS Lambda, explorando frameworks como LangGraph, CrewAI, AutoGen, Semantic Kernel y OpenAI Agents SDK. Me apasionan la Arquitectura de Software, el System Design, Platform Engineering, Cloud Computing y la Inteligencia Artificial, diseñando plataformas escalables, resilientes y preparadas para operar a escala empresarial.',
+      education: 'Educación',
+      competencies: 'Competencias',
+      graduated: 'Graduado'
     },
     projects: {
       title: 'Proyectos Destacados',
@@ -29,7 +36,9 @@ export const translations: Record<'es' | 'en', Translation> = {
       status: 'Estado',
       viewProject: 'Ver Proyecto',
       viewCode: 'Ver Código',
-      viewPaper: 'Ver Paper'
+      viewPaper: 'Ver Paper',
+      featured: 'Destacado',
+      more: 'más'
     },
     skills: {
       title: 'Habilidades Técnicas',
@@ -41,9 +50,23 @@ export const translations: Record<'es' | 'en', Translation> = {
       achievements: 'Logros Clave',
       items: [
         {
+          company: 'Coforge & BCP - Banco de Crédito del Perú',
+          role: 'Senior Software Engineer',
+          period: 'oct. 2026 - actualidad · Lima, Híbrido',
+          description: 'Senior Software Engineer asignado al cliente BCP para plataformas de banca digital. Diseño y desarrollo de microservicios con Java 21 y Quarkus, REST APIs bajo OpenAPI y el estándar BIAN, mensajería con Apache Kafka, caché con Redis y persistencia en Azure SQL, aplicando Event-Driven Architecture, Arquitectura Hexagonal, DDD, SOLID y Clean Code. Despliegue sobre Azure Kubernetes Service (AKS) con HPA, Ingress, ConfigMaps, Secrets y HashiCorp Vault, con CI/CD en Jenkins, prácticas DevSecOps y observabilidad con Grafana.',
+          achievements: [
+            'Microservicios Java 21 + Quarkus',
+            'Apache Kafka · Event-Driven',
+            'APIs OpenAPI · estándar BIAN',
+            'Azure AKS · HPA · HashiCorp Vault',
+            'CI/CD Jenkins · DevSecOps',
+            'Observabilidad con Grafana'
+          ]
+        },
+        {
           company: 'NTT DATA Europe & Latam & BCP - Banco de Crédito del Perú',
           role: 'Backend Developer - Microservices',
-          period: 'sept. 2024 - actualidad · 4 meses',
+          period: 'sept. 2024 - sept. 2026',
           description: 'Proyecto MBBK – BMO 3.0 Banca Móvil (10M+ usuarios activos), Squad Lending - Tribu Canales Digitales. Desarrollo de microservicios reactivos con Quarkus Framework (Java 21) para productos crediticios digitales bajo supervisión de líder técnica. Escritura de código implementando flujos de créditos con integración a sistemas bancarios, caché Redis optimizado y bases de datos PostgreSQL/MongoDB/DB2. Diseño de contratos OpenAPI 3.0 siguiendo arquitectura BIAN establecida y principios SOLID/POO. Ejecución de pruebas unitarias, integración, Contract Testing y colaboración estrecha con QA. Aprobación de APIs vía Gobierno Corporativo con test de vulnerabilidad y auditoría de seguridad. Aplicación de TDD, Code Review y BDD según lineamientos BCP. Despliegue en Kubernetes/OpenShift con pipelines CI/CD (Jenkins, GitLab). Participación activa en Daily (L-V), sesiones técnicas y ceremonias ágiles Scrum en sprints de 2 semanas.',
           achievements: [
             'Microservicios reactivos Quarkus + Mutiny',
@@ -103,6 +126,25 @@ export const translations: Record<'es' | 'en', Translation> = {
     companies: {
       title: 'Empresas de Confianza',
       subtitle: 'He trabajado con empresas líderes desarrollando soluciones de alto impacto'
+    },
+    achievements: {
+      title: 'Logros',
+      subtitle: 'Resultados e hitos destacados'
+    },
+    footer: {
+      rights: 'Todos los derechos reservados.'
+    },
+    certifications: {
+      title: 'Certificados y Honores',
+      subtitle: 'Formación académica, certificaciones y reconocimientos',
+      viewDocument: 'Ver documento',
+      verify: 'Verificar',
+      close: 'Cerrar',
+      types: {
+        degree: 'Grado Académico',
+        certification: 'Certificación',
+        honor: 'Honor'
+      }
     }
   },
   en: {
@@ -112,20 +154,27 @@ export const translations: Record<'es' | 'en', Translation> = {
       projects: 'Projects',
       skills: 'Skills',
       experience: 'Experience',
+      certifications: 'Certifications',
       contact: 'Contact'
     },
     hero: {
       greeting: 'Hi! I\'m',
-      title: 'Transforming ideas into high-impact digital solutions',
+      title: 'I build mission-critical backend systems and cloud-native platforms for digital banking.',
       btnProjects: 'View Projects',
-      btnResume: 'Download Resume',
+      btnResume: 'Request Resume',
+      resumeSubject: 'Resume request - John Paul Mamani',
+      resumeBody: 'Hi John Paul,\n\nI would like to receive your updated resume.\n\nName:\nCompany:\nRole / opportunity:\n\nThank you.',
+      resumeNote: 'Resume available upon personal request:',
       btnContact: 'Contact Me'
     },
     about: {
       title: 'About Me',
-      subtitle: 'Senior Software Engineer specialized in AI/ML, Cloud, and High-Impact Systems Architecture',
-      description1: 'Software Engineering graduate from UPC (100% completed, graduation in progress) with focus on Backend Development and emerging technologies. Currently working at NTT DATA & BCP, developing mission-critical microservices for Banca Móvil 3.0 serving 10M+ active users. Hands-on experience in reactive architectures, event-driven systems with Quarkus, Kafka, and Kubernetes.',
-      description2: 'My passion for scientific research and comparative analysis drives my work. Paper accepted at CSCI 2025 (Springer Nature, Las Vegas) with 80% global rating, presenting multimodal intelligent agent for SMEs integrating CLIP (vision), Whisper (audio), and Mistral 7B (NLP). Research transforms lives: proving that AI can bridge the digital divide in Latin America.'
+      subtitle: 'Senior Software Engineer | Backend & Distributed Systems | Java | Microservices | Cloud-Native | AI Engineering | System Design',
+      description1: 'Software Engineer (B.Sc. in Software Engineering – UPC) specialized in Backend Engineering, Microservices, Distributed Systems and Cloud-Native Architectures. I design and build enterprise digital banking platforms with Java 21, Quarkus, REST APIs, Apache Kafka, Redis and Azure SQL, applying OpenAPI and the BIAN standard, Event-Driven Architecture, Hexagonal Architecture, DDD, SOLID and Clean Code. I deploy on Azure Kubernetes Service (AKS) with HPA, Ingress, ConfigMaps, Secrets and HashiCorp Vault, automating delivery through CI/CD, Jenkins and DevSecOps practices.',
+      description2: 'I am expanding into AI Backend Engineering and Cloud Computing, building solutions with Python, FastAPI, LLMs, AI Agents, RAG, Tool Calling, Context & Memory Management and AWS Lambda, while exploring frameworks such as LangGraph, CrewAI, AutoGen, Semantic Kernel and the OpenAI Agents SDK. I am passionate about Software Architecture, System Design, Platform Engineering, Cloud Computing and Artificial Intelligence, designing platforms that are scalable, resilient and ready to operate at enterprise scale.',
+      education: 'Education',
+      competencies: 'Core competencies',
+      graduated: 'Graduated'
     },
     projects: {
       title: 'Featured Projects',
@@ -133,7 +182,9 @@ export const translations: Record<'es' | 'en', Translation> = {
       status: 'Status',
       viewProject: 'View Project',
       viewCode: 'View Code',
-      viewPaper: 'View Paper'
+      viewPaper: 'View Paper',
+      featured: 'Featured',
+      more: 'more'
     },
     skills: {
       title: 'Technical Skills',
@@ -145,9 +196,23 @@ export const translations: Record<'es' | 'en', Translation> = {
       achievements: 'Key Achievements',
       items: [
         {
+          company: 'Coforge & BCP - Banco de Crédito del Perú',
+          role: 'Senior Software Engineer',
+          period: 'Oct 2026 - Present · Lima, Hybrid',
+          description: 'Senior Software Engineer assigned to BCP, building digital banking platforms. Design and development of microservices with Java 21 and Quarkus, REST APIs following OpenAPI and the BIAN standard, messaging with Apache Kafka, Redis caching and Azure SQL persistence, applying Event-Driven Architecture, Hexagonal Architecture, DDD, SOLID and Clean Code. Deployment on Azure Kubernetes Service (AKS) with HPA, Ingress, ConfigMaps, Secrets and HashiCorp Vault, CI/CD with Jenkins, DevSecOps practices and observability with Grafana.',
+          achievements: [
+            'Java 21 + Quarkus microservices',
+            'Apache Kafka · Event-Driven',
+            'OpenAPI APIs · BIAN standard',
+            'Azure AKS · HPA · HashiCorp Vault',
+            'CI/CD Jenkins · DevSecOps',
+            'Observability with Grafana'
+          ]
+        },
+        {
           company: 'NTT DATA Europe & Latam & BCP - Banco de Crédito del Perú',
           role: 'Backend Developer - Microservices',
-          period: 'Sep 2024 - Present · 4 months',
+          period: 'Sep 2024 - Sep 2026',
           description: 'MBBK – BMO 3.0 Mobile Banking Project (10M+ active users), Squad Lending - Digital Channels Tribe. Development of reactive microservices with Quarkus Framework (Java 21) for digital credit products under technical leader supervision. Code writing implementing credit flows with banking systems integration, optimized Redis cache and PostgreSQL/MongoDB/DB2 databases. Design of OpenAPI 3.0 contracts following established BIAN architecture and SOLID/OOP principles. Execution of unit tests, integration, Contract Testing and close collaboration with QA. API approval via Corporate Governance with vulnerability testing and security audit. Application of TDD, Code Review and BDD according to BCP guidelines. Deployment on Kubernetes/OpenShift with CI/CD pipelines (Jenkins, GitLab). Active participation in Daily (M-F), technical sessions and Scrum agile ceremonies in 2-week sprints.',
           achievements: [
             'Reactive microservices Quarkus + Mutiny',
@@ -207,6 +272,25 @@ export const translations: Record<'es' | 'en', Translation> = {
     companies: {
       title: 'Trusted by Leading Companies',
       subtitle: 'Built high-impact solutions for industry leaders'
+    },
+    achievements: {
+      title: 'Highlights',
+      subtitle: 'Selected results and milestones'
+    },
+    footer: {
+      rights: 'All rights reserved.'
+    },
+    certifications: {
+      title: 'Certifications & Honors',
+      subtitle: 'Academic degrees, certifications and recognitions',
+      viewDocument: 'View document',
+      verify: 'Verify',
+      close: 'Close',
+      types: {
+        degree: 'Academic Degree',
+        certification: 'Certification',
+        honor: 'Honor'
+      }
     }
   }
 };

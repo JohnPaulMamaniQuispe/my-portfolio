@@ -9,6 +9,7 @@ export interface Translation {
     projects: string;
     skills: string;
     experience: string;
+    certifications: string;
     contact: string;
   };
   hero: {
@@ -16,6 +17,9 @@ export interface Translation {
     title: string;
     btnProjects: string;
     btnResume: string;
+    resumeSubject: string;
+    resumeBody: string;
+    resumeNote: string;
     btnContact: string;
   };
   about: {
@@ -23,6 +27,9 @@ export interface Translation {
     subtitle: string;
     description1: string;
     description2: string;
+    education: string;
+    competencies: string;
+    graduated: string;
   };
   projects: {
     title: string;
@@ -31,6 +38,8 @@ export interface Translation {
     viewProject: string;
     viewCode: string;
     viewPaper: string;
+    featured: string;
+    more: string;
   };
   skills: {
     title: string;
@@ -57,6 +66,21 @@ export interface Translation {
     title: string;
     subtitle: string;
   };
+  achievements: {
+    title: string;
+    subtitle: string;
+  };
+  footer: {
+    rights: string;
+  };
+  certifications: {
+    title: string;
+    subtitle: string;
+    viewDocument: string;
+    verify: string;
+    close: string;
+    types: Record<CertificationType, string>;
+  };
 }
 
 export interface Project {
@@ -66,28 +90,34 @@ export interface Project {
   status: string;
   type: string;
   github: string;
-  demo: string;
+  demo?: string;
   paper?: string;
   highlight?: boolean;
   metrics: string;
 }
 
+export interface SkillBadge {
+  name: string;
+  color: string;
+  logo?: string;
+  logoColor?: string;
+}
+
 export interface Skill {
   icon: React.ReactNode;
-  badges: string[];
-  level: number;
-  color: string;
+  items: SkillBadge[];
 }
 
 export interface Experience {
   icon: string | null;
+  // Logos oscuros con fondo transparente: se muestran sobre fondo blanco
+  onLight?: boolean;
 }
 
 export interface Achievement {
   icon: React.ComponentType<{ className?: string }>;
   title: string;
   description: string;
-  color: string;
 }
 
 export interface ContactInfo {
@@ -95,14 +125,26 @@ export interface ContactInfo {
   title: string;
   value: string;
   href: string;
-  color: string;
-  hoverColor: string;
 }
 
-export interface Stat {
-  value: string;
-  label: string;
-  color: string;
-}
 
 export type Language = 'es' | 'en';
+
+export type CertificationType = 'degree' | 'certification' | 'honor';
+
+export interface CertificationImage {
+  src: string;
+  width: number;
+  height: number;
+}
+
+export interface Certification {
+  type: CertificationType;
+  title: Record<Language, string>;
+  issuer: string;
+  date: string;
+  logo?: string;
+  images?: CertificationImage[];
+  file?: string;
+  credentialUrl?: string;
+}

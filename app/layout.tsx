@@ -1,58 +1,58 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains" });
 
 export const metadata: Metadata = {
-  title: "John Paul Mamani - Senior Software Engineer | AI/ML Specialist",
+  metadataBase: new URL("https://johnpaulmamani.dev"),
+  title: "John Paul Mamani - Senior Software Engineer | Backend, Distributed Systems & AI",
   description:
-    "Senior Software Engineer at NTT DATA & BCP with expertise in AI/ML, distributed systems, and cloud architecture. Building high-impact solutions serving 10M+ users and processing $100M+ daily transactions. Published AI researcher with proven track record in scalable enterprise systems.",
+    "Senior Software Engineer (B.Sc. UPC) specialized in Backend Engineering, Microservices, Distributed Systems, Cloud-Native Architectures and AI Backend Engineering. Building digital banking platforms with Java 21, Quarkus, Kafka and Azure Kubernetes Service.",
   keywords: [
     "Senior Software Engineer",
-    "AI Engineer",
-    "Machine Learning",
-    "Cloud Architecture",
+    "Backend Engineer",
+    "Java",
+    "System Design",
+    "AI Engineering",
+    "Microservices",
     "Distributed Systems",
-    "Full Stack Developer",
+    "Cloud-Native",
+    "Java 21",
+    "Quarkus",
+    "Apache Kafka",
+    "Azure Kubernetes Service",
+    "Event-Driven Architecture",
+    "Hexagonal Architecture",
+    "DDD",
+    "AI Backend Engineering",
+    "LLMs",
+    "RAG",
+    "Python",
+    "FastAPI",
+    "Coforge",
     "NTT DATA",
     "BCP",
-    "Banking Systems",
-    "React",
-    "Next.js",
-    "Python",
-    "AWS",
-    "Azure",
     "Lima",
     "Peru",
-    "FAANG",
-    "Tech Lead",
   ],
   authors: [{ name: "John Paul Mamani Quispe" }],
   robots: "index, follow",
   openGraph: {
-    title: "John Paul Mamani - Senior Software Engineer | AI/ML Specialist",
+    title: "John Paul Mamani - Senior Software Engineer | Backend, Distributed Systems & AI",
     description:
-      "Building mission-critical banking systems serving 10M+ users. Expert in AI/ML, distributed systems, and cloud architecture with proven high-impact results.",
+      "Backend Engineering, Microservices and Cloud-Native platforms for digital banking. Java 21, Quarkus, Kafka, AKS and AI Backend Engineering.",
     url: "https://johnpaulmamani.dev",
     siteName: "John Paul Mamani Portfolio",
     locale: "en_US",
     type: "website",
-    images: [
-      {
-        url: "/web-app-manifest-512x512.png",
-        width: 512,
-        height: 512,
-        alt: "John Paul Mamani - Senior Software Engineer",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "John Paul Mamani - Senior Software Engineer | AI/ML",
+    title: "John Paul Mamani - Senior Software Engineer | Backend, Distributed Systems & AI",
     description:
-      "Building mission-critical systems at scale. Expert in AI/ML, distributed systems, and cloud architecture.",
-    images: ["/web-app-manifest-512x512.png"],
+      "Backend Engineering, Microservices and Cloud-Native platforms for digital banking. Java 21, Quarkus, Kafka, AKS and AI Backend Engineering.",
   },
   icons: {
     icon: [
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#ffffff",
+  themeColor: "#0b0d10",
 };
 
 export default function RootLayout({
@@ -79,8 +79,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className="scroll-smooth" suppressHydrationWarning>
-      <body className={`${inter.className} antialiased`} suppressHydrationWarning>
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <body className={`${inter.variable} ${jetbrains.variable} font-sans antialiased`} suppressHydrationWarning>
         {children}
       </body>
     </html>

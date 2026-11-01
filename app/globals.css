@@ -1,110 +1,37 @@
 @import "tailwindcss";
 
-:root {
-  --background: #000000;
-  --foreground: #00ff41;
-  --glow-green: #00ff41;
-  --glow-cyan: #00ffff;
-  --glow-purple: #b400ff;
+/* Paleta sobria: un solo acento sobre fondo oscuro */
+@theme {
+  --color-canvas: #0b0d10;
+  --color-surface: #111418;
+  --color-raised: #171b20;
+  --color-line: #232830;
+  --color-fg: #e6e8eb;
+  --color-muted: #8b949e;
+  --color-accent: #00ff41;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, SFMono-Regular, monospace;
+}
+
+html {
+  scroll-padding-top: 4rem;
 }
 
 body {
-  background: #000;
-  color: #00ff41;
-  font-family: 'Courier New', monospace;
+  background: var(--color-canvas);
+  color: var(--color-fg);
   overflow-x: hidden;
 }
 
-/* Efectos de scanlines estilo terminal */
-/* body::before eliminado para fondo sólido puro */
+::selection {
+  background: rgba(0, 255, 65, 0.25);
+}
 
-/* Efecto de texto glitch */
-@keyframes glitch {
-  0% {
-    text-shadow: 2px 2px #00ffff, -2px -2px #ff00ff;
-  }
-  25% {
-    text-shadow: -2px 2px #00ffff, 2px -2px #ff00ff;
-  }
-  50% {
-    text-shadow: 2px -2px #00ffff, -2px 2px #ff00ff;
-  }
-  75% {
-    text-shadow: -2px -2px #00ffff, 2px 2px #ff00ff;
-  }
-  100% {
-    text-shadow: 2px 2px #00ffff, -2px -2px #ff00ff;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
-
-.glitch {
-  animation: glitch 0.3s infinite;
-}
-
-/* Efecto de glow para texto */
-.text-glow-green {
-  text-shadow: 0 0 10px #00ff41, 0 0 20px #00ff41, 0 0 30px #00ff41;
-}
-
-.text-glow-cyan {
-  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
-}
-
-.text-glow-purple {
-  text-shadow: 0 0 10px #b400ff, 0 0 20px #b400ff, 0 0 30px #b400ff;
-}
-
-/* Efecto de borde neón */
-.border-neon-green {
-  box-shadow: 0 0 10px #00ff41, inset 0 0 10px #00ff41;
-}
-
-.border-neon-cyan {
-  box-shadow: 0 0 10px #00ffff, inset 0 0 10px #00ffff;
-}
-
-/* Scrollbar personalizada estilo hacker */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #000000;
-  border-left: 1px solid #00ff41;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #00ff41, #00ffff);
-  box-shadow: 0 0 10px #00ff41;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #00ffff, #b400ff);
-  box-shadow: 0 0 15px #00ffff;
-}
-
-/* Animación de parpadeo para cursor */
-@keyframes blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0; }
-}
-
-.cursor-blink {
-  animation: blink 1s infinite;
-}
-
-/* Efecto de grid de fondo */
-.bg-grid {
-  background-image: 
-    linear-gradient(rgba(0, 255, 65, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 255, 65, 0.1) 1px, transparent 1px);
-  background-size: 50px 50px;
-}
-
