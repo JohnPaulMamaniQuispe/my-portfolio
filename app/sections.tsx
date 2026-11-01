@@ -45,21 +45,21 @@ export const Hero: React.FC<SectionProps & { scrollToSection: (section: string) 
         <div className="mt-10 flex flex-wrap items-center gap-3">
           <button
             onClick={() => scrollToSection('projects')}
-            className="px-5 py-2.5 rounded-lg bg-accent text-canvas text-sm font-medium hover:brightness-110 transition"
+            className="min-h-11 px-5 py-2.5 rounded-lg bg-accent text-canvas text-sm font-medium hover:brightness-110 transition"
           >
             {t.hero.btnProjects}
           </button>
           <a
             href={`mailto:${PERSONAL_INFO.email}?subject=${encodeURIComponent(t.hero.resumeSubject)}&body=${encodeURIComponent(t.hero.resumeBody)}`}
             title={PERSONAL_INFO.email}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-line text-sm text-fg hover:border-muted transition-colors"
+            className="inline-flex items-center gap-2 min-h-11 px-5 py-2.5 rounded-lg border border-line text-sm text-fg hover:border-muted transition-colors"
           >
             <FileText className="w-4 h-4" />
             {t.hero.btnResume}
           </a>
           <button
             onClick={() => scrollToSection('contact')}
-            className="inline-flex items-center gap-1.5 px-2 py-2.5 text-sm text-muted hover:text-fg transition-colors"
+            className="inline-flex items-center gap-1.5 min-h-11 px-2 py-2.5 text-sm text-muted hover:text-fg transition-colors"
           >
             {t.hero.btnContact}
             <ArrowRight className="w-4 h-4" />
@@ -73,7 +73,7 @@ export const Hero: React.FC<SectionProps & { scrollToSection: (section: string) 
           </a>
         </p>
 
-        <SocialLinks className="mt-8" />
+        <SocialLinks className="mt-6" />
       </div>
 
       {/* Avatar: la foto completa encaja dentro del círculo */}
@@ -297,7 +297,7 @@ export const Contact: React.FC<SectionProps> = ({ t }) => (
 );
 
 export const Footer: React.FC<SectionProps> = ({ t }) => (
-  <footer className="border-t border-line py-10">
+  <footer className="border-t border-line pt-10 pb-20 sm:pb-10">
     <div className="mx-auto max-w-5xl px-4 sm:px-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
       <p className="text-sm text-muted">
         © {new Date().getFullYear()} {PERSONAL_INFO.name}. {t.footer.rights}

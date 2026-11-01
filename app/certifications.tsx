@@ -49,7 +49,7 @@ const DocumentViewer: React.FC<{ doc: ViewerDoc; closeLabel: string; onClose: ()
     >
       <button
         onClick={onClose}
-        className="absolute top-4 right-4 md:top-6 md:right-6 z-10 p-2 rounded-full border border-line bg-surface text-muted hover:text-fg transition-colors"
+        className="absolute top-4 right-4 md:top-6 md:right-6 z-10 p-2.5 rounded-full border border-line bg-surface text-muted hover:text-fg transition-colors"
         aria-label={closeLabel}
       >
         <X className="w-6 h-6" />
@@ -148,7 +148,7 @@ export const CertificationsSection: React.FC<{ t: Translation; language: Languag
                       <button
                         type="button"
                         onClick={() => setViewerDoc({ src: docHref, title: cert.title[language], width: cert.images?.[0]?.width, height: cert.images?.[0]?.height })}
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-line text-sm text-fg hover:border-muted transition-colors"
+                        className="inline-flex items-center gap-2 min-h-11 px-4 py-2 rounded-lg border border-line text-sm text-fg hover:border-muted transition-colors"
                       >
                         <FileText className="w-4 h-4" />
                         {t.certifications.viewDocument}
@@ -159,7 +159,7 @@ export const CertificationsSection: React.FC<{ t: Translation; language: Languag
                         href={cert.credentialUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-line text-sm text-fg hover:border-muted transition-colors"
+                        className="inline-flex items-center gap-2 min-h-11 px-4 py-2 rounded-lg border border-line text-sm text-fg hover:border-muted transition-colors"
                       >
                         <ExternalLink className="w-4 h-4" />
                         {t.certifications.verify}

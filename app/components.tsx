@@ -103,13 +103,13 @@ export const Tag: React.FC<{ children: React.ReactNode }> = ({ children }) => (
 export const WhatsAppButton: React.FC = () => (
   <a
     href={`https://wa.me/${PERSONAL_INFO.phone.replace(/[\s+]/g, '')}?text=${encodeURIComponent(PERSONAL_INFO.whatsappMessage)}`}
-    className="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-[#25D366] flex items-center justify-center shadow-lg shadow-black/40 hover:brightness-110 transition"
+    className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#25D366] flex items-center justify-center shadow-lg shadow-black/40 hover:brightness-110 transition"
     target="_blank"
     rel="noopener noreferrer"
     title="WhatsApp"
     aria-label="WhatsApp"
   >
-    <Image src={PERSONAL_INFO.whatsappLogo} alt="" width={40} height={40} />
+    <Image src={PERSONAL_INFO.whatsappLogo} alt="" width={40} height={40} className="w-9 h-9 sm:w-10 sm:h-10" />
   </a>
 );
 
@@ -125,13 +125,13 @@ interface NavigationProps {
 }
 
 const LanguageToggle: React.FC<{ language: Language; setLanguage: (lang: Language) => void }> = ({ language, setLanguage }) => (
-  <div className="flex items-center gap-1 text-xs font-mono">
+  <div className="flex items-center lg:gap-1 text-xs font-mono">
     {(['es', 'en'] as const).map((lang, i) => (
       <React.Fragment key={lang}>
         {i > 0 && <span className="text-line">/</span>}
         <button
           onClick={() => setLanguage(lang)}
-          className={`px-1 uppercase transition-colors ${language === lang ? 'text-fg' : 'text-muted hover:text-fg'}`}
+          className={`min-w-11 min-h-11 lg:min-w-0 lg:min-h-0 lg:px-1 flex items-center justify-center uppercase transition-colors ${language === lang ? 'text-fg' : 'text-muted hover:text-fg'}`}
           aria-label={lang === 'es' ? 'Español' : 'English'}
           aria-pressed={language === lang}
         >
@@ -153,14 +153,14 @@ export const Navigation: React.FC<NavigationProps> = ({
   setLanguage,
   t
 }) => {
-  const menuItems: Array<keyof Translation['nav']> = ['home', 'about', 'projects', 'skills', 'experience', 'certifications', 'contact'];
+  const menuItems: Array<keyof Translation['nav']> = ['home', 'experience', 'projects', 'skills', 'certifications', 'about', 'contact'];
 
   return (
     <nav className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${isScrolled || isMenuOpen ? 'bg-canvas/85 backdrop-blur-md border-b border-line' : 'border-b border-transparent'}`}>
       <div className="mx-auto max-w-5xl px-4 sm:px-6 h-16 flex items-center justify-between">
         <button
           onClick={() => scrollToSection('home')}
-          className="flex items-center gap-3"
+          className="flex items-center gap-3 min-h-11"
           aria-label={`${PERSONAL_INFO.name} - ${t.nav.home}`}
         >
           <span className="relative w-8 h-8 rounded-full overflow-hidden ring-1 ring-line bg-surface">
@@ -191,11 +191,11 @@ export const Navigation: React.FC<NavigationProps> = ({
           </div>
         </div>
 
-        <div className="lg:hidden flex items-center gap-4">
+        <div className="lg:hidden flex items-center gap-1">
           <LanguageToggle language={language} setLanguage={setLanguage} />
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-muted hover:text-fg transition-colors p-1"
+            className="text-muted hover:text-fg transition-colors p-[11px] -mr-[11px]"
             aria-label={isMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
             aria-expanded={isMenuOpen}
           >
@@ -211,7 +211,7 @@ export const Navigation: React.FC<NavigationProps> = ({
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className={`block w-full text-left py-2.5 text-sm ${activeSection === item ? 'text-fg' : 'text-muted'}`}
+                className={`block w-full text-left py-3 text-sm ${activeSection === item ? 'text-fg' : 'text-muted'}`}
               >
                 {t.nav[item]}
               </button>
@@ -233,12 +233,12 @@ export const SocialLinks: React.FC<{ className?: string }> = ({ className = '' }
   ];
 
   return (
-    <div className={`flex items-center gap-5 ${className}`}>
+    <div className={`flex items-center gap-1 -ml-[13px] ${className}`}>
       {socialLinks.map(({ href, icon: Icon, label }) => (
         <a
           key={label}
           href={href}
-          className="text-muted hover:text-fg transition-colors"
+          className="p-[13px] text-muted hover:text-fg transition-colors"
           target={href.startsWith('http') ? '_blank' : undefined}
           rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
           aria-label={label}
@@ -255,7 +255,7 @@ const ProjectLink: React.FC<{ href: string; label: string; ariaLabel: string }> 
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className="inline-flex items-center gap-1 text-sm text-fg hover:text-accent transition-colors"
+    className="inline-flex items-center gap-1 min-h-11 text-sm text-fg hover:text-accent transition-colors"
     aria-label={ariaLabel}
   >
     {label}
@@ -283,7 +283,7 @@ export const ProjectCard: React.FC<{ project: Project; t: Translation }> = ({ pr
 
     <p className="mt-4 text-xs font-mono text-accent/90">{project.metrics}</p>
 
-    <div className="mt-auto pt-6 flex flex-wrap gap-5">
+    <div className="mt-auto pt-4 flex flex-wrap gap-x-5">
       {project.demo && (
         <ProjectLink href={project.demo} label={t.projects.viewProject} ariaLabel={`${t.projects.viewProject}: ${project.title}`} />
       )}

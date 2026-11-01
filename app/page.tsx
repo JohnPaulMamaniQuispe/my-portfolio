@@ -9,7 +9,7 @@ import { WhatsAppButton, Navigation, CodeRain } from './components';
 import { Hero, Companies, Achievements, About, Projects, Skills, Experience, Contact, Footer } from './sections';
 import { CertificationsSection } from './certifications';
 
-const SECTION_IDS = ['home', 'about', 'projects', 'skills', 'experience', 'certifications', 'contact'];
+const SECTION_IDS = ['home', 'experience', 'projects', 'skills', 'certifications', 'about', 'contact'];
 const LANGUAGE_KEY = 'portfolio-language';
 
 // =================================
@@ -97,8 +97,8 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen">
-      {/* Fondo animado fijo detrás de toda la página */}
-      <CodeRain className="fixed inset-0 w-full h-full z-0 opacity-30" />
+      {/* Fondo animado fijo: más tenue en la columna central, donde está el texto */}
+      <CodeRain className="fixed inset-0 w-full h-full z-0 opacity-30 [mask-image:linear-gradient(to_right,#000_0%,rgba(0,0,0,0.3)_28%,rgba(0,0,0,0.3)_72%,#000_100%)]" />
 
       <Navigation
         activeSection={activeSection}
@@ -112,14 +112,15 @@ export default function Portfolio() {
       />
 
       <main className="relative z-10">
+        {/* Orden pensado para reclutadores: primero experiencia y trabajo, luego el resto */}
         <Hero t={t} scrollToSection={scrollToSection} />
         <Companies t={t} />
-        <Achievements t={t} />
-        <About t={t} />
+        <Experience t={t} />
         <Projects t={t} />
         <Skills t={t} />
-        <Experience t={t} />
         <CertificationsSection t={t} language={language} />
+        <Achievements t={t} />
+        <About t={t} />
         <Contact t={t} />
       </main>
 
