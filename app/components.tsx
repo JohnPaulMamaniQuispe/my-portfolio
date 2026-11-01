@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { Github, Linkedin, Mail, Menu, X, ArrowUpRight } from 'lucide-react';
+import { Github, Linkedin, Mail, Menu, X, ArrowUpRight, ChevronDown } from 'lucide-react';
 import { Translation, Language, Project } from './types';
 import { PERSONAL_INFO } from './data';
 
@@ -274,14 +274,17 @@ export const ProjectCard: React.FC<{ project: Project; t: Translation }> = ({ pr
     </div>
 
     <h3 className="text-lg font-semibold text-fg leading-snug">{project.title}</h3>
-    <p className="mt-3 text-sm text-muted leading-relaxed line-clamp-4">{project.description}</p>
+    <p className="mt-3 text-sm text-muted leading-relaxed line-clamp-3">{project.description}</p>
 
-    <p className="mt-4 text-xs font-mono text-muted">
-      {project.tech.slice(0, 6).join(' · ')}
-      {project.tech.length > 6 && ` · +${project.tech.length - 6} ${t.projects.more}`}
-    </p>
-
-    <p className="mt-4 text-xs font-mono text-accent/90">{project.metrics}</p>
+    {/* Tecnologías y métricas a la vista solo si el visitante las pide */}
+    <details className="group mt-4">
+      <summary className="inline-flex items-center gap-1 min-h-11 cursor-pointer list-none text-sm text-muted hover:text-fg transition-colors [&::-webkit-details-marker]:hidden">
+        {t.projects.details}
+        <ChevronDown className="w-4 h-4 transition-transform group-open:rotate-180" />
+      </summary>
+      <p className="mt-2 text-xs font-mono text-muted leading-relaxed">{project.tech.join(' · ')}</p>
+      <p className="mt-3 text-xs font-mono text-accent/90 leading-relaxed">{project.metrics}</p>
+    </details>
 
     <div className="mt-auto pt-4 flex flex-wrap gap-x-5">
       {project.demo && (

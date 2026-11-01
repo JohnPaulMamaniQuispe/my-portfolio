@@ -121,7 +121,7 @@ export const SKILLS: Record<string, Skill> = {
       { name: "Azure AKS", logo: "microsoftazure", color: "0078D4" },
       { name: "Kubernetes", logo: "kubernetes", color: "326CE5" },
       { name: "Docker", logo: "docker", color: "2496ED" },
-      { name: "HashiCorp Vault", logo: "vault", color: "FFEC6E", logoColor: "black" },
+      { name: "HashiCorp Vault", logo: "vault", color: "FFEC6E" },
       { name: "Jenkins", logo: "jenkins", color: "D24939" },
       { name: "GitLab CI", logo: "gitlab", color: "FC6D26" },
       { name: "Grafana", logo: "grafana", color: "F46800" },

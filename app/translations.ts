@@ -38,7 +38,7 @@ export const translations: Record<'es' | 'en', Translation> = {
       viewCode: 'Ver Código',
       viewPaper: 'Ver Paper',
       featured: 'Destacado',
-      more: 'más'
+      details: 'Detalles'
     },
     skills: {
       title: 'Habilidades Técnicas',
@@ -184,7 +184,7 @@ export const translations: Record<'es' | 'en', Translation> = {
       viewCode: 'View Code',
       viewPaper: 'View Paper',
       featured: 'Featured',
-      more: 'more'
+      details: 'Details'
     },
     skills: {
       title: 'Technical Skills',

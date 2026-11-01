@@ -98,7 +98,7 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen">
       {/* Fondo animado fijo: más tenue en la columna central, donde está el texto */}
-      <CodeRain className="fixed inset-0 w-full h-full z-0 opacity-30 [mask-image:linear-gradient(to_right,#000_0%,rgba(0,0,0,0.3)_28%,rgba(0,0,0,0.3)_72%,#000_100%)]" />
+      <CodeRain className="fixed inset-0 w-full h-full z-0 opacity-20 [mask-image:linear-gradient(to_right,#000_0%,rgba(0,0,0,0.3)_28%,rgba(0,0,0,0.3)_72%,#000_100%)]" />
 
       <Navigation
         activeSection={activeSection}

@@ -39,7 +39,7 @@ export interface Translation {
     viewCode: string;
     viewPaper: string;
     featured: string;
-    more: string;
+    details: string;
   };
   skills: {
     title: string;

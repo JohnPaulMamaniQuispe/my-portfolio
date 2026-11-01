@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { MapPin, Mail, Phone, FileText, ArrowRight, Code, Brain, Cloud, Network } from 'lucide-react';
+import { MapPin, FileText, Code, Brain, Cloud, Network } from 'lucide-react';
 import { Translation, SkillBadge } from './types';
 import { PERSONAL_INFO, PROJECTS, SKILLS, EXPERIENCE, ACHIEVEMENTS, CONTACT_INFO, COMPANIES } from './data';
 import { Section, Tag, SocialLinks, ProjectCard } from './components';
@@ -36,11 +36,7 @@ export const Hero: React.FC<SectionProps & { scrollToSection: (section: string) 
         </h1>
         <p className="mt-6 text-lg md:text-xl text-muted max-w-2xl leading-relaxed">{t.hero.title}</p>
 
-        <ul className="mt-6 flex flex-wrap gap-2">
-          {FOCUS_AREAS.map((area) => (
-            <li key={area}><Tag>{area}</Tag></li>
-          ))}
-        </ul>
+        <p className="mt-4 font-mono text-xs sm:text-sm text-muted leading-relaxed">{FOCUS_AREAS.join(' · ')}</p>
 
         <div className="mt-10 flex flex-wrap items-center gap-3">
           <button
@@ -57,13 +53,6 @@ export const Hero: React.FC<SectionProps & { scrollToSection: (section: string) 
             <FileText className="w-4 h-4" />
             {t.hero.btnResume}
           </a>
-          <button
-            onClick={() => scrollToSection('contact')}
-            className="inline-flex items-center gap-1.5 min-h-11 px-2 py-2.5 text-sm text-muted hover:text-fg transition-colors"
-          >
-            {t.hero.btnContact}
-            <ArrowRight className="w-4 h-4" />
-          </button>
         </div>
 
         <p className="mt-5 text-sm text-muted">
@@ -142,18 +131,10 @@ export const About: React.FC<SectionProps> = ({ t }) => (
       <div className="space-y-5 text-muted leading-relaxed">
         <p>{t.about.description1}</p>
         <p>{t.about.description2}</p>
-        <ul className="pt-2 space-y-2 text-sm">
-          {[
-            { icon: MapPin, text: PERSONAL_INFO.location },
-            { icon: Mail, text: PERSONAL_INFO.email },
-            { icon: Phone, text: PERSONAL_INFO.phone }
-          ].map(({ icon: Icon, text }) => (
-            <li key={text} className="flex items-center gap-3">
-              <Icon className="w-4 h-4" />
-              <span className="text-fg">{text}</span>
-            </li>
-          ))}
-        </ul>
+        <p className="pt-2 flex items-center gap-3 text-sm">
+          <MapPin className="w-4 h-4" />
+          <span className="text-fg">{PERSONAL_INFO.location}</span>
+        </p>
       </div>
 
       <div className="space-y-10">
@@ -204,11 +185,19 @@ export const Projects: React.FC<SectionProps> = ({ t }) => (
   </Section>
 );
 
-// URL del badge de shields.io ("-" y "_" se escapan duplicándolos)
-const badgeUrl = ({ name, color, logo, logoColor = 'white' }: SkillBadge) => {
+// Luminancia relativa de un color hex (0 = negro, 1 = blanco)
+const luminance = (hex: string) => {
+  const [r, g, b] = [0, 2, 4].map((i) => parseInt(hex.slice(i, i + 2), 16) / 255);
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+};
+
+// URL del badge de shields.io: fondo oscuro común y el logo en el color de su marca
+// (los logos de marca muy oscura se muestran en blanco para que se vean). "-" y "_" se escapan duplicándolos
+const badgeUrl = ({ name, color, logo, logoColor }: SkillBadge) => {
   const label = encodeURIComponent(name.replace(/-/g, '--').replace(/_/g, '__'));
-  const logoParams = logo ? `&logo=${logo}&logoColor=${logoColor}` : '';
-  return `https://img.shields.io/badge/${label}-${color}?style=flat${logoParams}`;
+  const brandColor = logoColor ?? (luminance(color) < 0.2 ? 'white' : color);
+  const logoParams = logo ? `&logo=${logo}&logoColor=${brandColor}` : '';
+  return `https://img.shields.io/badge/${label}-1C2128?style=flat${logoParams}`;
 };
 
 export const Skills: React.FC<SectionProps> = ({ t }) => (
@@ -224,7 +213,7 @@ export const Skills: React.FC<SectionProps> = ({ t }) => (
             {items.map((item) => (
               <li key={item.name}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={badgeUrl(item)} alt={item.name} title={item.name} loading="lazy" className="h-7 rounded" />
+                <img src={badgeUrl(item)} alt={item.name} title={item.name} loading="lazy" className="h-7 rounded ring-1 ring-line" />
               </li>
             ))}
           </ul>
@@ -277,8 +266,8 @@ export const Contact: React.FC<SectionProps> = ({ t }) => (
       {PERSONAL_INFO.email}
     </a>
 
-    <div className="mt-12 grid sm:grid-cols-3 gap-4">
-      {CONTACT_INFO.map(({ icon: Icon, title, value, href }) => (
+    <div className="mt-12 grid sm:grid-cols-2 gap-4 max-w-2xl">
+      {CONTACT_INFO.filter(({ title }) => title !== 'Email').map(({ icon: Icon, title, value, href }) => (
         <a
           key={title}
           href={href}
